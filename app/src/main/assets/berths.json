@@ -1,0 +1,2285 @@
+[
+  {
+    "id": "SV-01",
+    "name": "Berço 01 — Berço 12A",
+    "sectorName": "Corredor de Exportação / Macuco / Guarujá",
+    "maxDraft": "14.2m",
+    "category": "SOLID_VEG",
+    "displayOrder": 1,
+    "schedules": [
+      {
+        "id": 1,
+        "shipName": "MV Atlantic Star",
+        "unloadingProduct": "Trigo Importação",
+        "loadingProduct": "Soja em Grãos",
+        "tonnage": 68500,
+        "startDay": 2.0,
+        "endDay": 10.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Operando"
+      },
+      {
+        "id": 2,
+        "shipName": "MV Ocean Pioneer",
+        "unloadingProduct": "Malte de Cevada",
+        "loadingProduct": "Milho Exportação",
+        "tonnage": 52000,
+        "startDay": 17.0,
+        "endDay": 19.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      },
+      {
+        "id": 3,
+        "shipName": "MV Nordic Trader",
+        "unloadingProduct": "Fertilizante Agrícola",
+        "loadingProduct": "Farelo de Soja",
+        "tonnage": 49000,
+        "startDay": 20.0,
+        "endDay": 22.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      },
+      {
+        "id": 4,
+        "shipName": "MV Brasil Express",
+        "unloadingProduct": "Trigo Argentino",
+        "loadingProduct": "Açúcar VHP",
+        "tonnage": 61000,
+        "startDay": 25.0,
+        "endDay": 29.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      }
+    ]
+  },
+  {
+    "id": "SV-02",
+    "name": "Berço 02 — Berço 19",
+    "sectorName": "Corredor de Exportação / Macuco / Guarujá",
+    "maxDraft": "14.2m",
+    "category": "SOLID_VEG",
+    "displayOrder": 2,
+    "schedules": [
+      {
+        "id": 5,
+        "shipName": "MV Atlantic Star 42",
+        "unloadingProduct": "Nenhum (Lastro)",
+        "loadingProduct": "Soja Transgênica",
+        "tonnage": 51269,
+        "startDay": 3.0,
+        "endDay": 8.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      },
+      {
+        "id": 6,
+        "shipName": "MV Brasil Express 42",
+        "unloadingProduct": "Fertilizante Agrícola",
+        "loadingProduct": "Soja Transgênica",
+        "tonnage": 57590,
+        "startDay": 17.0,
+        "endDay": 20.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      },
+      {
+        "id": 7,
+        "shipName": "MV Panamax Ceres 19",
+        "unloadingProduct": "Trigo Importação",
+        "loadingProduct": "Açúcar VHP",
+        "tonnage": 66527,
+        "startDay": 25.0,
+        "endDay": 28.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      }
+    ]
+  },
+  {
+    "id": "SV-03",
+    "name": "Berço 03 — Berço 20",
+    "sectorName": "Corredor de Exportação / Macuco / Guarujá",
+    "maxDraft": "14.2m",
+    "category": "SOLID_VEG",
+    "displayOrder": 3,
+    "schedules": [
+      {
+        "id": 8,
+        "shipName": "MV Ocean Pioneer 63",
+        "unloadingProduct": "Trigo Importação",
+        "loadingProduct": "Soja em Grãos",
+        "tonnage": 62633,
+        "startDay": 1.0,
+        "endDay": 4.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      },
+      {
+        "id": 9,
+        "shipName": "MV Star Gran 72",
+        "unloadingProduct": "Malte de Cevada",
+        "loadingProduct": "Milho Exportação",
+        "tonnage": 57666,
+        "startDay": 6.0,
+        "endDay": 8.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      }
+    ]
+  },
+  {
+    "id": "SV-04",
+    "name": "Berço 04 — Berço 21",
+    "sectorName": "Corredor de Exportação / Macuco / Guarujá",
+    "maxDraft": "14.2m",
+    "category": "SOLID_VEG",
+    "displayOrder": 4,
+    "schedules": [
+      {
+        "id": 10,
+        "shipName": "MV Nordic Trader 90",
+        "unloadingProduct": "Trigo Importação",
+        "loadingProduct": "Soja Transgênica",
+        "tonnage": 50198,
+        "startDay": 1.0,
+        "endDay": 3.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      },
+      {
+        "id": 11,
+        "shipName": "MV Bulk Santos 80",
+        "unloadingProduct": "Fertilizante Agrícola",
+        "loadingProduct": "Açúcar VHP",
+        "tonnage": 55207,
+        "startDay": 4.0,
+        "endDay": 8.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      }
+    ]
+  },
+  {
+    "id": "SV-05",
+    "name": "Berço 05 — Berço 38 (Corredor de Exportação)",
+    "sectorName": "Corredor de Exportação / Macuco / Guarujá",
+    "maxDraft": "14.2m",
+    "category": "SOLID_VEG",
+    "displayOrder": 5,
+    "schedules": [
+      {
+        "id": 12,
+        "shipName": "MV Brasil Express 88",
+        "unloadingProduct": "Trigo Importação",
+        "loadingProduct": "Milho Exportação",
+        "tonnage": 65438,
+        "startDay": 2.0,
+        "endDay": 7.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      },
+      {
+        "id": 13,
+        "shipName": "MV Panamax Ceres 63",
+        "unloadingProduct": "Milho Granel",
+        "loadingProduct": "Soja Transgênica",
+        "tonnage": 45455,
+        "startDay": 17.0,
+        "endDay": 21.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      }
+    ]
+  },
+  {
+    "id": "SV-06",
+    "name": "Berço 06 — Berço 38A (Corredor de Exportação)",
+    "sectorName": "Corredor de Exportação / Macuco / Guarujá",
+    "maxDraft": "14.2m",
+    "category": "SOLID_VEG",
+    "displayOrder": 6,
+    "schedules": [
+      {
+        "id": 14,
+        "shipName": "MV Star Gran 89",
+        "unloadingProduct": "Malte de Cevada",
+        "loadingProduct": "Farelo de Soja",
+        "tonnage": 70975,
+        "startDay": 1.0,
+        "endDay": 6.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      },
+      {
+        "id": 15,
+        "shipName": "MV Golden Grain 90",
+        "unloadingProduct": "Trigo Importação",
+        "loadingProduct": "Soja em Grãos",
+        "tonnage": 47645,
+        "startDay": 17.0,
+        "endDay": 22.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      }
+    ]
+  },
+  {
+    "id": "SV-07",
+    "name": "Berço 07 — Berço 39 (Corredor de Exportação)",
+    "sectorName": "Corredor de Exportação / Macuco / Guarujá",
+    "maxDraft": "14.2m",
+    "category": "SOLID_VEG",
+    "displayOrder": 7,
+    "schedules": [
+      {
+        "id": 16,
+        "shipName": "MV Bulk Santos 29",
+        "unloadingProduct": "Malte de Cevada",
+        "loadingProduct": "Soja em Grãos",
+        "tonnage": 59812,
+        "startDay": 1.0,
+        "endDay": 3.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      },
+      {
+        "id": 17,
+        "shipName": "MV Pacific Harvest 34",
+        "unloadingProduct": "Fertilizante Agrícola",
+        "loadingProduct": "Milho Exportação",
+        "tonnage": 61486,
+        "startDay": 5.0,
+        "endDay": 8.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      },
+      {
+        "id": 18,
+        "shipName": "MV Pampa Bulk 14",
+        "unloadingProduct": "Fertilizante Agrícola",
+        "loadingProduct": "Soja Transgênica",
+        "tonnage": 71804,
+        "startDay": 17.0,
+        "endDay": 19.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      }
+    ]
+  },
+  {
+    "id": "SV-08",
+    "name": "Berço 08 — Berço 39A (Corredor de Exportação)",
+    "sectorName": "Corredor de Exportação / Macuco / Guarujá",
+    "maxDraft": "14.2m",
+    "category": "SOLID_VEG",
+    "displayOrder": 8,
+    "schedules": [
+      {
+        "id": 19,
+        "shipName": "MV Panamax Ceres 62",
+        "unloadingProduct": "Trigo Importação",
+        "loadingProduct": "Soja em Grãos",
+        "tonnage": 59855,
+        "startDay": 1.0,
+        "endDay": 5.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      },
+      {
+        "id": 20,
+        "shipName": "MV Southern Cross 10",
+        "unloadingProduct": "Nenhum (Lastro)",
+        "loadingProduct": "Soja em Grãos",
+        "tonnage": 62741,
+        "startDay": 7.0,
+        "endDay": 9.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      }
+    ]
+  },
+  {
+    "id": "SV-09",
+    "name": "Berço 09 — TGG (Terminal de Granéis do Guarujá)",
+    "sectorName": "Corredor de Exportação / Macuco / Guarujá",
+    "maxDraft": "14.2m",
+    "category": "SOLID_VEG",
+    "displayOrder": 9,
+    "schedules": [
+      {
+        "id": 21,
+        "shipName": "MV Golden Grain 76",
+        "unloadingProduct": "Milho Granel",
+        "loadingProduct": "Açúcar VHP",
+        "tonnage": 62413,
+        "startDay": 2.0,
+        "endDay": 7.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      },
+      {
+        "id": 22,
+        "shipName": "MV Agro Pride 32",
+        "unloadingProduct": "Trigo Importação",
+        "loadingProduct": "Soja Transgênica",
+        "tonnage": 51393,
+        "startDay": 17.0,
+        "endDay": 22.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      },
+      {
+        "id": 23,
+        "shipName": "MV Ocean Pioneer 60",
+        "unloadingProduct": "Trigo Importação",
+        "loadingProduct": "Soja em Grãos",
+        "tonnage": 55041,
+        "startDay": 25.0,
+        "endDay": 29.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      }
+    ]
+  },
+  {
+    "id": "SV-10",
+    "name": "Berço 10 — TEAG (Terminal de Exportação de Açúcar)",
+    "sectorName": "Corredor de Exportação / Macuco / Guarujá",
+    "maxDraft": "14.2m",
+    "category": "SOLID_VEG",
+    "displayOrder": 10,
+    "schedules": [
+      {
+        "id": 24,
+        "shipName": "MV Bulk Santos 65",
+        "unloadingProduct": "Milho Granel",
+        "loadingProduct": "Soja Transgênica",
+        "tonnage": 48824,
+        "startDay": 1.0,
+        "endDay": 3.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      },
+      {
+        "id": 25,
+        "shipName": "MV Pacific Harvest 54",
+        "unloadingProduct": "Nenhum (Lastro)",
+        "loadingProduct": "Soja Transgênica",
+        "tonnage": 50536,
+        "startDay": 4.0,
+        "endDay": 7.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      },
+      {
+        "id": 26,
+        "shipName": "MV Pampa Bulk 98",
+        "unloadingProduct": "Fertilizante Agrícola",
+        "loadingProduct": "Milho Exportação",
+        "tonnage": 54907,
+        "startDay": 17.0,
+        "endDay": 19.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      }
+    ]
+  },
+  {
+    "id": "SV-11",
+    "name": "Berço 11 — TEG (Terminal Exportador do Guarujá)",
+    "sectorName": "Corredor de Exportação / Macuco / Guarujá",
+    "maxDraft": "14.2m",
+    "category": "SOLID_VEG",
+    "displayOrder": 11,
+    "schedules": [
+      {
+        "id": 27,
+        "shipName": "MV Panamax Ceres 82",
+        "unloadingProduct": "Milho Granel",
+        "loadingProduct": "Farelo de Soja",
+        "tonnage": 52111,
+        "startDay": 2.0,
+        "endDay": 5.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      },
+      {
+        "id": 28,
+        "shipName": "MV Southern Cross 28",
+        "unloadingProduct": "Fertilizante Agrícola",
+        "loadingProduct": "Milho Exportação",
+        "tonnage": 66676,
+        "startDay": 8.0,
+        "endDay": 10.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      },
+      {
+        "id": 29,
+        "shipName": "MV Atlantic Star 57",
+        "unloadingProduct": "Trigo Importação",
+        "loadingProduct": "Farelo de Soja",
+        "tonnage": 64818,
+        "startDay": 17.0,
+        "endDay": 21.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      }
+    ]
+  },
+  {
+    "id": "SV-12",
+    "name": "Berço 12 — TERMAG (Berço Externo)",
+    "sectorName": "Corredor de Exportação / Macuco / Guarujá",
+    "maxDraft": "14.2m",
+    "category": "SOLID_VEG",
+    "displayOrder": 12,
+    "schedules": [
+      {
+        "id": 30,
+        "shipName": "MV Golden Grain 10",
+        "unloadingProduct": "Nenhum (Lastro)",
+        "loadingProduct": "Milho Exportação",
+        "tonnage": 52068,
+        "startDay": 1.0,
+        "endDay": 5.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      },
+      {
+        "id": 31,
+        "shipName": "MV Agro Pride 44",
+        "unloadingProduct": "Nenhum (Lastro)",
+        "loadingProduct": "Açúcar VHP",
+        "tonnage": 51301,
+        "startDay": 6.0,
+        "endDay": 8.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      },
+      {
+        "id": 32,
+        "shipName": "MV Ocean Pioneer 89",
+        "unloadingProduct": "Trigo Importação",
+        "loadingProduct": "Farelo de Soja",
+        "tonnage": 54579,
+        "startDay": 17.0,
+        "endDay": 19.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      }
+    ]
+  },
+  {
+    "id": "SV-13",
+    "name": "Berço 13 — TES (Terminal Exportador de Santos)",
+    "sectorName": "Corredor de Exportação / Macuco / Guarujá",
+    "maxDraft": "14.2m",
+    "category": "SOLID_VEG",
+    "displayOrder": 13,
+    "schedules": [
+      {
+        "id": 33,
+        "shipName": "MV Pacific Harvest 13",
+        "unloadingProduct": "Milho Granel",
+        "loadingProduct": "Soja Transgênica",
+        "tonnage": 57286,
+        "startDay": 1.0,
+        "endDay": 5.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      },
+      {
+        "id": 34,
+        "shipName": "MV Pampa Bulk 52",
+        "unloadingProduct": "Trigo Importação",
+        "loadingProduct": "Soja Transgênica",
+        "tonnage": 67875,
+        "startDay": 17.0,
+        "endDay": 20.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      }
+    ]
+  },
+  {
+    "id": "SV-14",
+    "name": "Berço 14 — Cutrale (Ponta da Praia)",
+    "sectorName": "Corredor de Exportação / Macuco / Guarujá",
+    "maxDraft": "14.2m",
+    "category": "SOLID_VEG",
+    "displayOrder": 14,
+    "schedules": [
+      {
+        "id": 35,
+        "shipName": "MV Southern Cross 37",
+        "unloadingProduct": "Malte de Cevada",
+        "loadingProduct": "Milho Exportação",
+        "tonnage": 70676,
+        "startDay": 2.0,
+        "endDay": 4.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      },
+      {
+        "id": 36,
+        "shipName": "MV Atlantic Star 10",
+        "unloadingProduct": "Milho Granel",
+        "loadingProduct": "Açúcar VHP",
+        "tonnage": 67902,
+        "startDay": 8.0,
+        "endDay": 10.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      }
+    ]
+  },
+  {
+    "id": "CT-01",
+    "name": "Berço 15 — BTP 1 (Brasil Terminal Portuário)",
+    "sectorName": "Alamoa / Margem Esquerda / Conceiçãozinha",
+    "maxDraft": "15.0m",
+    "category": "CONTAINERS",
+    "displayOrder": 15,
+    "schedules": [
+      {
+        "id": 37,
+        "shipName": "Hapag-Lloyd Rio 51",
+        "unloadingProduct": "Contêineres Importação (Eletrônicos/Autopeças)",
+        "loadingProduct": "Cabotagem Manaus/Suape (TEU)",
+        "tonnage": 73461,
+        "startDay": 3.0,
+        "endDay": 5.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      },
+      {
+        "id": 38,
+        "shipName": "COSCO Shipping Brazil 65",
+        "unloadingProduct": "Contêineres Químicos & Insumos",
+        "loadingProduct": "Contêineres Manufaturados Export",
+        "tonnage": 56293,
+        "startDay": 17.0,
+        "endDay": 21.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      }
+    ]
+  },
+  {
+    "id": "CT-02",
+    "name": "Berço 16 — BTP 2 (Brasil Terminal Portuário)",
+    "sectorName": "Alamoa / Margem Esquerda / Conceiçãozinha",
+    "maxDraft": "15.0m",
+    "category": "CONTAINERS",
+    "displayOrder": 16,
+    "schedules": [
+      {
+        "id": 39,
+        "shipName": "ONE Iguaçu 60",
+        "unloadingProduct": "Contêineres Vazios Reposição",
+        "loadingProduct": "Cabotagem Manaus/Suape (TEU)",
+        "tonnage": 63342,
+        "startDay": 3.0,
+        "endDay": 6.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      },
+      {
+        "id": 40,
+        "shipName": "ZIM Atlântico 37",
+        "unloadingProduct": "Contêineres Importação (Eletrônicos/Autopeças)",
+        "loadingProduct": "Contêineres Café & Algodão (TEU)",
+        "tonnage": 105711,
+        "startDay": 17.0,
+        "endDay": 20.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      },
+      {
+        "id": 41,
+        "shipName": "MSC Valparaíso 72",
+        "unloadingProduct": "Contêineres Importação (Eletrônicos/Autopeças)",
+        "loadingProduct": "Contêineres Manufaturados Export",
+        "tonnage": 66514,
+        "startDay": 25.0,
+        "endDay": 28.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      }
+    ]
+  },
+  {
+    "id": "CT-03",
+    "name": "Berço 17 — BTP 3 (Brasil Terminal Portuário)",
+    "sectorName": "Alamoa / Margem Esquerda / Conceiçãozinha",
+    "maxDraft": "15.0m",
+    "category": "CONTAINERS",
+    "displayOrder": 17,
+    "schedules": [
+      {
+        "id": 42,
+        "shipName": "Evergreen Express 70",
+        "unloadingProduct": "Contêineres Vazios Reposição",
+        "loadingProduct": "Contêineres Café & Algodão (TEU)",
+        "tonnage": 55052,
+        "startDay": 2.0,
+        "endDay": 7.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      },
+      {
+        "id": 43,
+        "shipName": "Log-In Polaris 67",
+        "unloadingProduct": "Contêineres Importação (Eletrônicos/Autopeças)",
+        "loadingProduct": "Contêineres Reefer (Carnes/Frutas)",
+        "tonnage": 104340,
+        "startDay": 17.0,
+        "endDay": 22.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      }
+    ]
+  },
+  {
+    "id": "CT-04",
+    "name": "Berço 18 — Santos Brasil (Tecon 1)",
+    "sectorName": "Alamoa / Margem Esquerda / Conceiçãozinha",
+    "maxDraft": "15.0m",
+    "category": "CONTAINERS",
+    "displayOrder": 18,
+    "schedules": [
+      {
+        "id": 44,
+        "shipName": "COSCO Shipping Brazil 58",
+        "unloadingProduct": "Contêineres Químicos & Insumos",
+        "loadingProduct": "Contêineres Manufaturados Export",
+        "tonnage": 59471,
+        "startDay": 1.0,
+        "endDay": 3.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      },
+      {
+        "id": 45,
+        "shipName": "Mercosul Suape 89",
+        "unloadingProduct": "Contêineres Importação (Eletrônicos/Autopeças)",
+        "loadingProduct": "Contêineres Manufaturados Export",
+        "tonnage": 57279,
+        "startDay": 5.0,
+        "endDay": 7.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      }
+    ]
+  },
+  {
+    "id": "CT-05",
+    "name": "Berço 19 — Santos Brasil (Tecon 2)",
+    "sectorName": "Alamoa / Margem Esquerda / Conceiçãozinha",
+    "maxDraft": "15.0m",
+    "category": "CONTAINERS",
+    "displayOrder": 19,
+    "schedules": [
+      {
+        "id": 46,
+        "shipName": "ZIM Atlântico 81",
+        "unloadingProduct": "Contêineres Químicos & Insumos",
+        "loadingProduct": "Contêineres Café & Algodão (TEU)",
+        "tonnage": 85240,
+        "startDay": 1.0,
+        "endDay": 3.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      },
+      {
+        "id": 47,
+        "shipName": "MSC Valparaíso 51",
+        "unloadingProduct": "Contêineres Químicos & Insumos",
+        "loadingProduct": "Contêineres Manufaturados Export",
+        "tonnage": 82117,
+        "startDay": 5.0,
+        "endDay": 8.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      }
+    ]
+  },
+  {
+    "id": "CT-06",
+    "name": "Berço 20 — Santos Brasil (Tecon 3)",
+    "sectorName": "Alamoa / Margem Esquerda / Conceiçãozinha",
+    "maxDraft": "15.0m",
+    "category": "CONTAINERS",
+    "displayOrder": 20,
+    "schedules": [
+      {
+        "id": 48,
+        "shipName": "Log-In Polaris 59",
+        "unloadingProduct": "Contêineres Vazios Reposição",
+        "loadingProduct": "Contêineres Reefer (Carnes/Frutas)",
+        "tonnage": 109351,
+        "startDay": 2.0,
+        "endDay": 5.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      },
+      {
+        "id": 49,
+        "shipName": "Maersk Santos 73",
+        "unloadingProduct": "Contêineres Químicos & Insumos",
+        "loadingProduct": "Contêineres Manufaturados Export",
+        "tonnage": 80951,
+        "startDay": 17.0,
+        "endDay": 19.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      },
+      {
+        "id": 50,
+        "shipName": "ONE Iguaçu 38",
+        "unloadingProduct": "Contêineres Químicos & Insumos",
+        "loadingProduct": "Contêineres Reefer (Carnes/Frutas)",
+        "tonnage": 60746,
+        "startDay": 25.0,
+        "endDay": 27.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      }
+    ]
+  },
+  {
+    "id": "CT-07",
+    "name": "Berço 21 — Santos Brasil (Tecon 4)",
+    "sectorName": "Alamoa / Margem Esquerda / Conceiçãozinha",
+    "maxDraft": "15.0m",
+    "category": "CONTAINERS",
+    "displayOrder": 21,
+    "schedules": [
+      {
+        "id": 51,
+        "shipName": "Mercosul Suape 95",
+        "unloadingProduct": "Contêineres Químicos & Insumos",
+        "loadingProduct": "Contêineres Manufaturados Export",
+        "tonnage": 93723,
+        "startDay": 2.0,
+        "endDay": 6.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      },
+      {
+        "id": 52,
+        "shipName": "CMA CGM Amazonas 59",
+        "unloadingProduct": "Contêineres Vazios Reposição",
+        "loadingProduct": "Contêineres Reefer (Carnes/Frutas)",
+        "tonnage": 58423,
+        "startDay": 17.0,
+        "endDay": 21.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      },
+      {
+        "id": 53,
+        "shipName": "Evergreen Express 93",
+        "unloadingProduct": "Contêineres Importação (Eletrônicos/Autopeças)",
+        "loadingProduct": "Contêineres Reefer (Carnes/Frutas)",
+        "tonnage": 96651,
+        "startDay": 25.0,
+        "endDay": 29.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      }
+    ]
+  },
+  {
+    "id": "CT-08",
+    "name": "Berço 22 — DP World Santos 1",
+    "sectorName": "Alamoa / Margem Esquerda / Conceiçãozinha",
+    "maxDraft": "15.0m",
+    "category": "CONTAINERS",
+    "displayOrder": 22,
+    "schedules": [
+      {
+        "id": 54,
+        "shipName": "MSC Valparaíso 15",
+        "unloadingProduct": "Contêineres Maquinário Industrial",
+        "loadingProduct": "Contêineres Reefer (Carnes/Frutas)",
+        "tonnage": 90489,
+        "startDay": 3.0,
+        "endDay": 5.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      },
+      {
+        "id": 55,
+        "shipName": "Hapag-Lloyd Rio 41",
+        "unloadingProduct": "Contêineres Importação (Eletrônicos/Autopeças)",
+        "loadingProduct": "Cabotagem Manaus/Suape (TEU)",
+        "tonnage": 84348,
+        "startDay": 7.0,
+        "endDay": 10.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      },
+      {
+        "id": 56,
+        "shipName": "COSCO Shipping Brazil 10",
+        "unloadingProduct": "Contêineres Maquinário Industrial",
+        "loadingProduct": "Contêineres Reefer (Carnes/Frutas)",
+        "tonnage": 98858,
+        "startDay": 17.0,
+        "endDay": 22.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      }
+    ]
+  },
+  {
+    "id": "CT-09",
+    "name": "Berço 23 — DP World Santos 2",
+    "sectorName": "Alamoa / Margem Esquerda / Conceiçãozinha",
+    "maxDraft": "15.0m",
+    "category": "CONTAINERS",
+    "displayOrder": 23,
+    "schedules": [
+      {
+        "id": 57,
+        "shipName": "Maersk Santos 34",
+        "unloadingProduct": "Contêineres Vazios Reposição",
+        "loadingProduct": "Contêineres Reefer (Carnes/Frutas)",
+        "tonnage": 96226,
+        "startDay": 3.0,
+        "endDay": 5.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      },
+      {
+        "id": 58,
+        "shipName": "ONE Iguaçu 34",
+        "unloadingProduct": "Contêineres Químicos & Insumos",
+        "loadingProduct": "Contêineres Café & Algodão (TEU)",
+        "tonnage": 88487,
+        "startDay": 17.0,
+        "endDay": 20.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      },
+      {
+        "id": 59,
+        "shipName": "ZIM Atlântico 40",
+        "unloadingProduct": "Contêineres Importação (Eletrônicos/Autopeças)",
+        "loadingProduct": "Contêineres Café & Algodão (TEU)",
+        "tonnage": 76788,
+        "startDay": 25.0,
+        "endDay": 29.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      }
+    ]
+  },
+  {
+    "id": "CT-10",
+    "name": "Berço 24 — Ecoporto Santos (Valongo)",
+    "sectorName": "Alamoa / Margem Esquerda / Conceiçãozinha",
+    "maxDraft": "15.0m",
+    "category": "CONTAINERS",
+    "displayOrder": 24,
+    "schedules": [
+      {
+        "id": 60,
+        "shipName": "Hapag-Lloyd Rio 89",
+        "unloadingProduct": "Contêineres Importação (Eletrônicos/Autopeças)",
+        "loadingProduct": "Cabotagem Manaus/Suape (TEU)",
+        "tonnage": 60055,
+        "startDay": 1.0,
+        "endDay": 3.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      },
+      {
+        "id": 61,
+        "shipName": "COSCO Shipping Brazil 22",
+        "unloadingProduct": "Contêineres Químicos & Insumos",
+        "loadingProduct": "Contêineres Reefer (Carnes/Frutas)",
+        "tonnage": 68808,
+        "startDay": 5.0,
+        "endDay": 8.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      }
+    ]
+  },
+  {
+    "id": "CL-01",
+    "name": "Berço 25 — Berço 31 (Suzano / Paquetá)",
+    "sectorName": "Paquetá / Outeirinhos / Macuco",
+    "maxDraft": "13.8m",
+    "category": "PULP",
+    "displayOrder": 25,
+    "schedules": [
+      {
+        "id": 62,
+        "shipName": "MV Suzano Horizon 84",
+        "unloadingProduct": "Nenhum (Lastro)",
+        "loadingProduct": "Fardos de Celulose Exportação",
+        "tonnage": 44661,
+        "startDay": 3.0,
+        "endDay": 6.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      },
+      {
+        "id": 63,
+        "shipName": "MV Emerald Sea 14",
+        "unloadingProduct": "Bobinas de Papel Imprensa",
+        "loadingProduct": "Papel Kraftliner Bobinas",
+        "tonnage": 62235,
+        "startDay": 17.0,
+        "endDay": 19.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      },
+      {
+        "id": 64,
+        "shipName": "MV Grieg Bergen 50",
+        "unloadingProduct": "Equipamentos Florestais",
+        "loadingProduct": "Fardos de Celulose Exportação",
+        "tonnage": 42981,
+        "startDay": 25.0,
+        "endDay": 29.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      }
+    ]
+  },
+  {
+    "id": "CL-02",
+    "name": "Berço 26 — Berço 32 (Eldorado Brasil)",
+    "sectorName": "Paquetá / Outeirinhos / Macuco",
+    "maxDraft": "13.8m",
+    "category": "PULP",
+    "displayOrder": 26,
+    "schedules": [
+      {
+        "id": 65,
+        "shipName": "MV Klabin Spirit 55",
+        "unloadingProduct": "Nenhum (Lastro)",
+        "loadingProduct": "Papel Kraftliner Bobinas",
+        "tonnage": 42938,
+        "startDay": 1.0,
+        "endDay": 6.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      },
+      {
+        "id": 66,
+        "shipName": "MV Saga Wind 36",
+        "unloadingProduct": "Nenhum (Lastro)",
+        "loadingProduct": "Celulose Fibra Longa",
+        "tonnage": 57275,
+        "startDay": 17.0,
+        "endDay": 19.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      },
+      {
+        "id": 67,
+        "shipName": "MV Pulp Carrier I 84",
+        "unloadingProduct": "Bobinas de Papel Imprensa",
+        "loadingProduct": "Papel Kraftliner Bobinas",
+        "tonnage": 59214,
+        "startDay": 25.0,
+        "endDay": 29.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      }
+    ]
+  },
+  {
+    "id": "CL-03",
+    "name": "Berço 27 — Berço 33 (Bracell T33)",
+    "sectorName": "Paquetá / Outeirinhos / Macuco",
+    "maxDraft": "13.8m",
+    "category": "PULP",
+    "displayOrder": 27,
+    "schedules": [
+      {
+        "id": 68,
+        "shipName": "MV Saga Fram 41",
+        "unloadingProduct": "Bobinas de Papel Imprensa",
+        "loadingProduct": "Papel Kraftliner Bobinas",
+        "tonnage": 64356,
+        "startDay": 3.0,
+        "endDay": 5.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      },
+      {
+        "id": 69,
+        "shipName": "MV Star Lygra 61",
+        "unloadingProduct": "Insumos Químicos de Branqueamento",
+        "loadingProduct": "Celulose Fibra Longa",
+        "tonnage": 63981,
+        "startDay": 6.0,
+        "endDay": 10.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      }
+    ]
+  },
+  {
+    "id": "CL-04",
+    "name": "Berço 28 — Berço 34 (Fibria / Suzano)",
+    "sectorName": "Paquetá / Outeirinhos / Macuco",
+    "maxDraft": "13.8m",
+    "category": "PULP",
+    "displayOrder": 28,
+    "schedules": [
+      {
+        "id": 70,
+        "shipName": "MV Emerald Sea 42",
+        "unloadingProduct": "Insumos Químicos de Branqueamento",
+        "loadingProduct": "Fardos de Celulose Exportação",
+        "tonnage": 38341,
+        "startDay": 1.0,
+        "endDay": 4.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      },
+      {
+        "id": 71,
+        "shipName": "MV Grieg Bergen 38",
+        "unloadingProduct": "Nenhum (Lastro)",
+        "loadingProduct": "Celulose Fibra Longa",
+        "tonnage": 54860,
+        "startDay": 5.0,
+        "endDay": 10.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      },
+      {
+        "id": 72,
+        "shipName": "MV Klabin Spirit 24",
+        "unloadingProduct": "Bobinas de Papel Imprensa",
+        "loadingProduct": "Papel Kraftliner Bobinas",
+        "tonnage": 41222,
+        "startDay": 17.0,
+        "endDay": 20.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      }
+    ]
+  },
+  {
+    "id": "CL-05",
+    "name": "Berço 29 — Berço 35 (Macuco Celulose)",
+    "sectorName": "Paquetá / Outeirinhos / Macuco",
+    "maxDraft": "13.8m",
+    "category": "PULP",
+    "displayOrder": 29,
+    "schedules": [
+      {
+        "id": 73,
+        "shipName": "MV Saga Wind 64",
+        "unloadingProduct": "Bobinas de Papel Imprensa",
+        "loadingProduct": "Papel Kraftliner Bobinas",
+        "tonnage": 52339,
+        "startDay": 1.0,
+        "endDay": 5.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      },
+      {
+        "id": 74,
+        "shipName": "MV Pulp Carrier I 82",
+        "unloadingProduct": "Bobinas de Papel Imprensa",
+        "loadingProduct": "Fardos de Celulose Exportação",
+        "tonnage": 48977,
+        "startDay": 7.0,
+        "endDay": 9.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      },
+      {
+        "id": 75,
+        "shipName": "MV Saga Fram 65",
+        "unloadingProduct": "Insumos Químicos de Branqueamento",
+        "loadingProduct": "Papel Kraftliner Bobinas",
+        "tonnage": 45879,
+        "startDay": 17.0,
+        "endDay": 21.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      }
+    ]
+  },
+  {
+    "id": "CL-06",
+    "name": "Berço 30 — Berço 36 (Terminal Macuco)",
+    "sectorName": "Paquetá / Outeirinhos / Macuco",
+    "maxDraft": "13.8m",
+    "category": "PULP",
+    "displayOrder": 30,
+    "schedules": [
+      {
+        "id": 76,
+        "shipName": "MV Star Lygra 79",
+        "unloadingProduct": "Nenhum (Lastro)",
+        "loadingProduct": "Celulose Fibra Longa",
+        "tonnage": 55078,
+        "startDay": 1.0,
+        "endDay": 6.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      },
+      {
+        "id": 77,
+        "shipName": "MV Suzano Horizon 79",
+        "unloadingProduct": "Nenhum (Lastro)",
+        "loadingProduct": "Celulose Fibra Curta (Eucalipto)",
+        "tonnage": 43992,
+        "startDay": 17.0,
+        "endDay": 22.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      },
+      {
+        "id": 78,
+        "shipName": "MV Emerald Sea 35",
+        "unloadingProduct": "Bobinas de Papel Imprensa",
+        "loadingProduct": "Celulose Fibra Curta (Eucalipto)",
+        "tonnage": 62183,
+        "startDay": 25.0,
+        "endDay": 29.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      }
+    ]
+  },
+  {
+    "id": "CL-07",
+    "name": "Berço 31 — Berço 14 (Outeirinhos Celulose)",
+    "sectorName": "Paquetá / Outeirinhos / Macuco",
+    "maxDraft": "13.8m",
+    "category": "PULP",
+    "displayOrder": 31,
+    "schedules": [
+      {
+        "id": 79,
+        "shipName": "MV Grieg Bergen 39",
+        "unloadingProduct": "Insumos Químicos de Branqueamento",
+        "loadingProduct": "Fardos de Celulose Exportação",
+        "tonnage": 58153,
+        "startDay": 2.0,
+        "endDay": 4.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      },
+      {
+        "id": 80,
+        "shipName": "MV Klabin Spirit 86",
+        "unloadingProduct": "Nenhum (Lastro)",
+        "loadingProduct": "Celulose Fibra Curta (Eucalipto)",
+        "tonnage": 64371,
+        "startDay": 17.0,
+        "endDay": 22.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      }
+    ]
+  },
+  {
+    "id": "CL-08",
+    "name": "Berço 32 — Berço 15 (Outeirinhos Sul)",
+    "sectorName": "Paquetá / Outeirinhos / Macuco",
+    "maxDraft": "13.8m",
+    "category": "PULP",
+    "displayOrder": 32,
+    "schedules": [
+      {
+        "id": 81,
+        "shipName": "MV Pulp Carrier I 68",
+        "unloadingProduct": "Equipamentos Florestais",
+        "loadingProduct": "Celulose Fibra Longa",
+        "tonnage": 58576,
+        "startDay": 1.0,
+        "endDay": 3.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      },
+      {
+        "id": 82,
+        "shipName": "MV Saga Fram 17",
+        "unloadingProduct": "Equipamentos Florestais",
+        "loadingProduct": "Papel Kraftliner Bobinas",
+        "tonnage": 64464,
+        "startDay": 4.0,
+        "endDay": 6.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      },
+      {
+        "id": 83,
+        "shipName": "MV Star Lygra 61",
+        "unloadingProduct": "Insumos Químicos de Branqueamento",
+        "loadingProduct": "Papel Kraftliner Bobinas",
+        "tonnage": 56475,
+        "startDay": 17.0,
+        "endDay": 21.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      }
+    ]
+  },
+  {
+    "id": "CL-09",
+    "name": "Berço 33 — DP World Celulose (Conceiçãozinha)",
+    "sectorName": "Paquetá / Outeirinhos / Macuco",
+    "maxDraft": "13.8m",
+    "category": "PULP",
+    "displayOrder": 33,
+    "schedules": [
+      {
+        "id": 84,
+        "shipName": "MV Suzano Horizon 98",
+        "unloadingProduct": "Equipamentos Florestais",
+        "loadingProduct": "Fardos de Celulose Exportação",
+        "tonnage": 63624,
+        "startDay": 1.0,
+        "endDay": 5.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      },
+      {
+        "id": 85,
+        "shipName": "MV Emerald Sea 65",
+        "unloadingProduct": "Nenhum (Lastro)",
+        "loadingProduct": "Celulose Fibra Curta (Eucalipto)",
+        "tonnage": 44520,
+        "startDay": 17.0,
+        "endDay": 22.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      }
+    ]
+  },
+  {
+    "id": "LQ-01",
+    "name": "Berço 34 — Ilha Barnabé — Berço 1",
+    "sectorName": "Ilha Barnabé / Alamoa",
+    "maxDraft": "13.2m",
+    "category": "LIQUID_CHEM",
+    "displayOrder": 34,
+    "schedules": [
+      {
+        "id": 86,
+        "shipName": "MT Stolt Santos 31",
+        "unloadingProduct": "Soda Cáustica Líquida",
+        "loadingProduct": "Óleo Combustível Marítimo (Bunker)",
+        "tonnage": 28070,
+        "startDay": 1.0,
+        "endDay": 3.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      },
+      {
+        "id": 87,
+        "shipName": "MT Flumar Brasil 71",
+        "unloadingProduct": "Metanol & Solventes",
+        "loadingProduct": "Óleo Vegetal Refinado",
+        "tonnage": 33272,
+        "startDay": 6.0,
+        "endDay": 10.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      },
+      {
+        "id": 88,
+        "shipName": "MT Alamoa Star 86",
+        "unloadingProduct": "Óleo Diesel S10 Importado",
+        "loadingProduct": "Óleo Vegetal Refinado",
+        "tonnage": 40258,
+        "startDay": 17.0,
+        "endDay": 21.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      }
+    ]
+  },
+  {
+    "id": "LQ-02",
+    "name": "Berço 35 — Ilha Barnabé — Berço 2",
+    "sectorName": "Ilha Barnabé / Alamoa",
+    "maxDraft": "13.2m",
+    "category": "LIQUID_CHEM",
+    "displayOrder": 35,
+    "schedules": [
+      {
+        "id": 89,
+        "shipName": "MT Bow Triumph 53",
+        "unloadingProduct": "GLP (Gás Liquefeito)",
+        "loadingProduct": "Etanol Anidro Exportação",
+        "tonnage": 41819,
+        "startDay": 1.0,
+        "endDay": 6.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      },
+      {
+        "id": 90,
+        "shipName": "MT Odfjell Spirit 62",
+        "unloadingProduct": "Óleo Diesel S10 Importado",
+        "loadingProduct": "Biodiesel B100",
+        "tonnage": 31389,
+        "startDay": 7.0,
+        "endDay": 10.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      }
+    ]
+  },
+  {
+    "id": "LQ-03",
+    "name": "Berço 36 — Ilha Barnabé — Berço 3",
+    "sectorName": "Ilha Barnabé / Alamoa",
+    "maxDraft": "13.2m",
+    "category": "LIQUID_CHEM",
+    "displayOrder": 36,
+    "schedules": [
+      {
+        "id": 91,
+        "shipName": "MT Transpetro Atlântico 87",
+        "unloadingProduct": "GLP (Gás Liquefeito)",
+        "loadingProduct": "Óleo Combustível Marítimo (Bunker)",
+        "tonnage": 42735,
+        "startDay": 1.0,
+        "endDay": 6.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      },
+      {
+        "id": 92,
+        "shipName": "MT Petro Tanker 53",
+        "unloadingProduct": "Metanol & Solventes",
+        "loadingProduct": "Biodiesel B100",
+        "tonnage": 25002,
+        "startDay": 17.0,
+        "endDay": 20.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      },
+      {
+        "id": 93,
+        "shipName": "MT Stolt Santos 83",
+        "unloadingProduct": "Nafta Petroquímica",
+        "loadingProduct": "Óleo Combustível Marítimo (Bunker)",
+        "tonnage": 48269,
+        "startDay": 25.0,
+        "endDay": 29.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      }
+    ]
+  },
+  {
+    "id": "LQ-04",
+    "name": "Berço 37 — Ilha Barnabé — Berço 4 (Bocaina)",
+    "sectorName": "Ilha Barnabé / Alamoa",
+    "maxDraft": "13.2m",
+    "category": "LIQUID_CHEM",
+    "displayOrder": 37,
+    "schedules": [
+      {
+        "id": 94,
+        "shipName": "MT Flumar Brasil 38",
+        "unloadingProduct": "Nafta Petroquímica",
+        "loadingProduct": "Biodiesel B100",
+        "tonnage": 33976,
+        "startDay": 3.0,
+        "endDay": 5.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      },
+      {
+        "id": 95,
+        "shipName": "MT Alamoa Star 60",
+        "unloadingProduct": "Metanol & Solventes",
+        "loadingProduct": "Óleo Vegetal Refinado",
+        "tonnage": 49758,
+        "startDay": 8.0,
+        "endDay": 10.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      }
+    ]
+  },
+  {
+    "id": "LQ-05",
+    "name": "Berço 38 — Alemoa Líquidos — Berço 1",
+    "sectorName": "Ilha Barnabé / Alamoa",
+    "maxDraft": "13.2m",
+    "category": "LIQUID_CHEM",
+    "displayOrder": 38,
+    "schedules": [
+      {
+        "id": 96,
+        "shipName": "MT Odfjell Spirit 26",
+        "unloadingProduct": "Soda Cáustica Líquida",
+        "loadingProduct": "Óleo Vegetal Refinado",
+        "tonnage": 46787,
+        "startDay": 2.0,
+        "endDay": 4.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      },
+      {
+        "id": 97,
+        "shipName": "MT Chemical Pioneer 92",
+        "unloadingProduct": "Óleo Diesel S10 Importado",
+        "loadingProduct": "Óleo Combustível Marítimo (Bunker)",
+        "tonnage": 45032,
+        "startDay": 6.0,
+        "endDay": 8.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      }
+    ]
+  },
+  {
+    "id": "LQ-06",
+    "name": "Berço 39 — Alemoa Líquidos — Berço 2",
+    "sectorName": "Ilha Barnabé / Alamoa",
+    "maxDraft": "13.2m",
+    "category": "LIQUID_CHEM",
+    "displayOrder": 39,
+    "schedules": [
+      {
+        "id": 98,
+        "shipName": "MT Petro Tanker 10",
+        "unloadingProduct": "Metanol & Solventes",
+        "loadingProduct": "Óleo Vegetal Refinado",
+        "tonnage": 33547,
+        "startDay": 3.0,
+        "endDay": 7.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      },
+      {
+        "id": 99,
+        "shipName": "MT Stolt Santos 59",
+        "unloadingProduct": "Metanol & Solventes",
+        "loadingProduct": "Óleo Vegetal Refinado",
+        "tonnage": 47674,
+        "startDay": 17.0,
+        "endDay": 19.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      }
+    ]
+  },
+  {
+    "id": "LQ-07",
+    "name": "Berço 40 — Alemoa GLP / Transpetro",
+    "sectorName": "Ilha Barnabé / Alamoa",
+    "maxDraft": "13.2m",
+    "category": "LIQUID_CHEM",
+    "displayOrder": 40,
+    "schedules": [
+      {
+        "id": 100,
+        "shipName": "MT Alamoa Star 52",
+        "unloadingProduct": "Nafta Petroquímica",
+        "loadingProduct": "Biodiesel B100",
+        "tonnage": 27055,
+        "startDay": 3.0,
+        "endDay": 6.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      },
+      {
+        "id": 101,
+        "shipName": "MT Bow Triumph 78",
+        "unloadingProduct": "Nafta Petroquímica",
+        "loadingProduct": "Óleo Combustível Marítimo (Bunker)",
+        "tonnage": 27874,
+        "startDay": 8.0,
+        "endDay": 10.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      },
+      {
+        "id": 102,
+        "shipName": "MT Odfjell Spirit 10",
+        "unloadingProduct": "Óleo Diesel S10 Importado",
+        "loadingProduct": "Óleo Combustível Marítimo (Bunker)",
+        "tonnage": 39194,
+        "startDay": 17.0,
+        "endDay": 19.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      }
+    ]
+  },
+  {
+    "id": "LQ-08",
+    "name": "Berço 41 — Saboo Líquidos Químicos",
+    "sectorName": "Ilha Barnabé / Alamoa",
+    "maxDraft": "13.2m",
+    "category": "LIQUID_CHEM",
+    "displayOrder": 41,
+    "schedules": [
+      {
+        "id": 103,
+        "shipName": "MT Chemical Pioneer 24",
+        "unloadingProduct": "Óleo Diesel S10 Importado",
+        "loadingProduct": "Óleo Combustível Marítimo (Bunker)",
+        "tonnage": 35765,
+        "startDay": 2.0,
+        "endDay": 7.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      },
+      {
+        "id": 104,
+        "shipName": "MT Transpetro Atlântico 94",
+        "unloadingProduct": "Óleo Diesel S10 Importado",
+        "loadingProduct": "Etanol Anidro Exportação",
+        "tonnage": 25760,
+        "startDay": 17.0,
+        "endDay": 21.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      }
+    ]
+  },
+  {
+    "id": "SD-01",
+    "name": "Berço 42 — TIPLAM / Usiminas — Berço Siderúrgico 1",
+    "sectorName": "Ponta da Praia / TIPLAM Cubatão / Saboó",
+    "maxDraft": "14.0m",
+    "category": "STEEL",
+    "displayOrder": 42,
+    "schedules": [
+      {
+        "id": 105,
+        "shipName": "MV Iron Voyager 11",
+        "unloadingProduct": "Sucata Metálica",
+        "loadingProduct": "Vergalhões e Perfis Estruturais",
+        "tonnage": 43325,
+        "startDay": 1.0,
+        "endDay": 3.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      },
+      {
+        "id": 106,
+        "shipName": "MV Usiminas Pride 79",
+        "unloadingProduct": "Sucata Metálica",
+        "loadingProduct": "Vergalhões e Perfis Estruturais",
+        "tonnage": 40935,
+        "startDay": 5.0,
+        "endDay": 9.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      },
+      {
+        "id": 107,
+        "shipName": "MV Atlantic Forge 13",
+        "unloadingProduct": "Chapas Grossas de Aço",
+        "loadingProduct": "Fio-Máquina Siderúrgico",
+        "tonnage": 34548,
+        "startDay": 17.0,
+        "endDay": 19.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      }
+    ]
+  },
+  {
+    "id": "SD-02",
+    "name": "Berço 43 — TIPLAM / Usiminas — Berço Siderúrgico 2",
+    "sectorName": "Ponta da Praia / TIPLAM Cubatão / Saboó",
+    "maxDraft": "14.0m",
+    "category": "STEEL",
+    "displayOrder": 43,
+    "schedules": [
+      {
+        "id": 108,
+        "shipName": "MV Atlantic Forge 78",
+        "unloadingProduct": "Trilhos Ferroviários Importados",
+        "loadingProduct": "Bobinas de Aço Laminado",
+        "tonnage": 47694,
+        "startDay": 2.0,
+        "endDay": 7.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      },
+      {
+        "id": 109,
+        "shipName": "MV Gerdau Spirit 44",
+        "unloadingProduct": "Sucata Metálica",
+        "loadingProduct": "Placas de Aço Exportação",
+        "tonnage": 48910,
+        "startDay": 17.0,
+        "endDay": 21.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      },
+      {
+        "id": 110,
+        "shipName": "MV Steel Navigator 86",
+        "unloadingProduct": "Chapas Grossas de Aço",
+        "loadingProduct": "Vergalhões e Perfis Estruturais",
+        "tonnage": 57202,
+        "startDay": 25.0,
+        "endDay": 29.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      }
+    ]
+  },
+  {
+    "id": "SD-03",
+    "name": "Berço 44 — Cubatão Siderurgia — Berço 3",
+    "sectorName": "Ponta da Praia / TIPLAM Cubatão / Saboó",
+    "maxDraft": "14.0m",
+    "category": "STEEL",
+    "displayOrder": 44,
+    "schedules": [
+      {
+        "id": 111,
+        "shipName": "MV Steel Navigator 84",
+        "unloadingProduct": "Chapas Grossas de Aço",
+        "loadingProduct": "Bobinas de Aço Laminado",
+        "tonnage": 44645,
+        "startDay": 2.0,
+        "endDay": 5.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      },
+      {
+        "id": 112,
+        "shipName": "MV Iron Voyager 43",
+        "unloadingProduct": "Sucata Metálica",
+        "loadingProduct": "Bobinas de Aço Laminado",
+        "tonnage": 39153,
+        "startDay": 6.0,
+        "endDay": 9.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      },
+      {
+        "id": 113,
+        "shipName": "MV Usiminas Pride 22",
+        "unloadingProduct": "Carvão Metalúrgico (Coque)",
+        "loadingProduct": "Bobinas de Aço Laminado",
+        "tonnage": 33824,
+        "startDay": 17.0,
+        "endDay": 21.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      }
+    ]
+  },
+  {
+    "id": "SD-04",
+    "name": "Berço 45 — Saboo Siderúrgico — Berço 22",
+    "sectorName": "Ponta da Praia / TIPLAM Cubatão / Saboó",
+    "maxDraft": "14.0m",
+    "category": "STEEL",
+    "displayOrder": 45,
+    "schedules": [
+      {
+        "id": 114,
+        "shipName": "MV Usiminas Pride 15",
+        "unloadingProduct": "Trilhos Ferroviários Importados",
+        "loadingProduct": "Placas de Aço Exportação",
+        "tonnage": 47662,
+        "startDay": 2.0,
+        "endDay": 5.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      },
+      {
+        "id": 115,
+        "shipName": "MV Atlantic Forge 77",
+        "unloadingProduct": "Sucata Metálica",
+        "loadingProduct": "Placas de Aço Exportação",
+        "tonnage": 56899,
+        "startDay": 7.0,
+        "endDay": 9.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      }
+    ]
+  },
+  {
+    "id": "SD-05",
+    "name": "Berço 46 — Saboo Siderúrgico — Berço 23",
+    "sectorName": "Ponta da Praia / TIPLAM Cubatão / Saboó",
+    "maxDraft": "14.0m",
+    "category": "STEEL",
+    "displayOrder": 46,
+    "schedules": [
+      {
+        "id": 116,
+        "shipName": "MV Gerdau Spirit 96",
+        "unloadingProduct": "Trilhos Ferroviários Importados",
+        "loadingProduct": "Fio-Máquina Siderúrgico",
+        "tonnage": 39544,
+        "startDay": 1.0,
+        "endDay": 5.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      },
+      {
+        "id": 117,
+        "shipName": "MV Steel Navigator 94",
+        "unloadingProduct": "Carvão Metalúrgico (Coque)",
+        "loadingProduct": "Placas de Aço Exportação",
+        "tonnage": 56189,
+        "startDay": 6.0,
+        "endDay": 10.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      },
+      {
+        "id": 118,
+        "shipName": "MV Iron Voyager 46",
+        "unloadingProduct": "Trilhos Ferroviários Importados",
+        "loadingProduct": "Placas de Aço Exportação",
+        "tonnage": 52902,
+        "startDay": 17.0,
+        "endDay": 20.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      }
+    ]
+  },
+  {
+    "id": "MN-01",
+    "name": "Berço 47 — Outeirinhos Fertilizantes — Berço 16",
+    "sectorName": "Outeirinhos / TIPLAM / Conceiçãozinha",
+    "maxDraft": "13.5m",
+    "category": "MINERAL",
+    "displayOrder": 47,
+    "schedules": [
+      {
+        "id": 119,
+        "shipName": "MV Potash Star 56",
+        "unloadingProduct": "Cloreto de Potássio (Fertilizante KCl)",
+        "loadingProduct": "Calcário Agrícola",
+        "tonnage": 56102,
+        "startDay": 2.0,
+        "endDay": 6.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      },
+      {
+        "id": 120,
+        "shipName": "MV Golden Horizon 66",
+        "unloadingProduct": "Sal Marinho Industrial",
+        "loadingProduct": "Gesso Agrícola",
+        "tonnage": 56352,
+        "startDay": 17.0,
+        "endDay": 20.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      },
+      {
+        "id": 121,
+        "shipName": "MV Sulfur Queen 44",
+        "unloadingProduct": "Enxofre a Granel",
+        "loadingProduct": "Gesso Agrícola",
+        "tonnage": 57684,
+        "startDay": 25.0,
+        "endDay": 29.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      }
+    ]
+  },
+  {
+    "id": "MN-02",
+    "name": "Berço 48 — Outeirinhos Minerais — Berço 17",
+    "sectorName": "Outeirinhos / TIPLAM / Conceiçãozinha",
+    "maxDraft": "13.5m",
+    "category": "MINERAL",
+    "displayOrder": 48,
+    "schedules": [
+      {
+        "id": 122,
+        "shipName": "MV Sulfur Queen 27",
+        "unloadingProduct": "Cloreto de Potássio (Fertilizante KCl)",
+        "loadingProduct": "Nenhum (Saída em Lastro)",
+        "tonnage": 43891,
+        "startDay": 3.0,
+        "endDay": 6.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      },
+      {
+        "id": 123,
+        "shipName": "MV Mineral Express 82",
+        "unloadingProduct": "Enxofre a Granel",
+        "loadingProduct": "Gesso Agrícola",
+        "tonnage": 51835,
+        "startDay": 17.0,
+        "endDay": 21.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      },
+      {
+        "id": 124,
+        "shipName": "MV Salt Carrier 41",
+        "unloadingProduct": "Ureia Granulada",
+        "loadingProduct": "Minério de Bauxita",
+        "tonnage": 46040,
+        "startDay": 25.0,
+        "endDay": 29.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      }
+    ]
+  },
+  {
+    "id": "MN-03",
+    "name": "Berço 49 — TIPLAM Fertilizantes — Berço 1",
+    "sectorName": "Outeirinhos / TIPLAM / Conceiçãozinha",
+    "maxDraft": "13.5m",
+    "category": "MINERAL",
+    "displayOrder": 49,
+    "schedules": [
+      {
+        "id": 125,
+        "shipName": "MV Salt Carrier 18",
+        "unloadingProduct": "Fosfato (MAP/DAP)",
+        "loadingProduct": "Gesso Agrícola",
+        "tonnage": 38067,
+        "startDay": 1.0,
+        "endDay": 3.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      },
+      {
+        "id": 126,
+        "shipName": "MV Potash Star 15",
+        "unloadingProduct": "Fosfato (MAP/DAP)",
+        "loadingProduct": "Nenhum (Saída em Lastro)",
+        "tonnage": 58883,
+        "startDay": 4.0,
+        "endDay": 8.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      }
+    ]
+  },
+  {
+    "id": "MN-04",
+    "name": "Berço 50 — Conceiçãozinha Sal & Enxofre — Berço 29",
+    "sectorName": "Outeirinhos / TIPLAM / Conceiçãozinha",
+    "maxDraft": "13.5m",
+    "category": "MINERAL",
+    "displayOrder": 50,
+    "schedules": [
+      {
+        "id": 127,
+        "shipName": "MV Golden Horizon 48",
+        "unloadingProduct": "Cloreto de Potássio (Fertilizante KCl)",
+        "loadingProduct": "Nenhum (Saída em Lastro)",
+        "tonnage": 38755,
+        "startDay": 1.0,
+        "endDay": 6.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      },
+      {
+        "id": 128,
+        "shipName": "MV Sulfur Queen 57",
+        "unloadingProduct": "Enxofre a Granel",
+        "loadingProduct": "Nenhum (Saída em Lastro)",
+        "tonnage": 55466,
+        "startDay": 8.0,
+        "endDay": 10.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      }
+    ]
+  },
+  {
+    "id": "SC-01",
+    "name": "Berço 51 — Berço 29A — Citrosuco",
+    "sectorName": "Paquetá / Macuco",
+    "maxDraft": "13.0m",
+    "category": "CITRUS",
+    "displayOrder": 51,
+    "schedules": [
+      {
+        "id": 129,
+        "shipName": "MV Carlos Fischer 89",
+        "unloadingProduct": "Tambores Assépticos Vazios",
+        "loadingProduct": "Óleo Essencial Cítrico & D-Limoneno",
+        "tonnage": 29166,
+        "startDay": 1.0,
+        "endDay": 5.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      },
+      {
+        "id": 130,
+        "shipName": "MV Citrus Blossom 58",
+        "unloadingProduct": "Insumos de Refrigeração",
+        "loadingProduct": "Suco Cítrico NFC Refrigerado",
+        "tonnage": 33071,
+        "startDay": 6.0,
+        "endDay": 8.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      }
+    ]
+  },
+  {
+    "id": "SC-02",
+    "name": "Berço 52 — Berço 30 — Cutrale Sucos Cítricos",
+    "sectorName": "Paquetá / Macuco",
+    "maxDraft": "13.0m",
+    "category": "CITRUS",
+    "displayOrder": 52,
+    "schedules": [
+      {
+        "id": 131,
+        "shipName": "MV Ouro Verde 27",
+        "unloadingProduct": "Insumos de Refrigeração",
+        "loadingProduct": "Óleo Essencial Cítrico & D-Limoneno",
+        "tonnage": 35853,
+        "startDay": 2.0,
+        "endDay": 4.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      },
+      {
+        "id": 132,
+        "shipName": "MV Carlos Fischer 44",
+        "unloadingProduct": "Nenhum (Lastro)",
+        "loadingProduct": "Suco Cítrico NFC Refrigerado",
+        "tonnage": 31100,
+        "startDay": 6.0,
+        "endDay": 10.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      }
+    ]
+  },
+  {
+    "id": "SC-03",
+    "name": "Berço 53 — Berço 32A — Louis Dreyfus Citrus",
+    "sectorName": "Paquetá / Macuco",
+    "maxDraft": "13.0m",
+    "category": "CITRUS",
+    "displayOrder": 53,
+    "schedules": [
+      {
+        "id": 133,
+        "shipName": "MV Orange Sun 47",
+        "unloadingProduct": "Nenhum (Lastro)",
+        "loadingProduct": "Suco Cítrico NFC Refrigerado",
+        "tonnage": 29464,
+        "startDay": 2.0,
+        "endDay": 6.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      },
+      {
+        "id": 134,
+        "shipName": "MV Ouro Verde 93",
+        "unloadingProduct": "Nenhum (Lastro)",
+        "loadingProduct": "Suco Cítrico NFC Refrigerado",
+        "tonnage": 37787,
+        "startDay": 17.0,
+        "endDay": 20.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      }
+    ]
+  },
+  {
+    "id": "MP-01",
+    "name": "Berço 54 — Berço Público Multipropósito 25 (Saboó)",
+    "sectorName": "Cais do Saboó / Paquetá",
+    "maxDraft": "13.0m",
+    "category": "MULTIPURPOSE",
+    "displayOrder": 54,
+    "schedules": [
+      {
+        "id": 135,
+        "shipName": "MV Global Carrier 77",
+        "unloadingProduct": "Transformadores & Turbinas Eólicas",
+        "loadingProduct": "Tubos e Estruturas Metálicas",
+        "tonnage": 28229,
+        "startDay": 2.0,
+        "endDay": 4.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      },
+      {
+        "id": 136,
+        "shipName": "MV Santos Explorer 31",
+        "unloadingProduct": "Equipamentos Industriais Pesados",
+        "loadingProduct": "Tubos e Estruturas Metálicas",
+        "tonnage": 21846,
+        "startDay": 5.0,
+        "endDay": 7.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      }
+    ]
+  },
+  {
+    "id": "MP-02",
+    "name": "Berço 55 — Berço Público Multipropósito 26 (Saboó)",
+    "sectorName": "Cais do Saboó / Paquetá",
+    "maxDraft": "13.0m",
+    "category": "MULTIPURPOSE",
+    "displayOrder": 55,
+    "schedules": [
+      {
+        "id": 137,
+        "shipName": "MV Sun Coast 70",
+        "unloadingProduct": "Bobinas e Cabos Submarinos",
+        "loadingProduct": "Big Bags de Açúcar/Café",
+        "tonnage": 28929,
+        "startDay": 2.0,
+        "endDay": 4.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      },
+      {
+        "id": 138,
+        "shipName": "MV Global Carrier 56",
+        "unloadingProduct": "Transformadores & Turbinas Eólicas",
+        "loadingProduct": "Carga Geral Solta & Projeto",
+        "tonnage": 23249,
+        "startDay": 5.0,
+        "endDay": 9.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      },
+      {
+        "id": 139,
+        "shipName": "MV Santos Explorer 98",
+        "unloadingProduct": "Equipamentos Industriais Pesados",
+        "loadingProduct": "Carga Geral Solta & Projeto",
+        "tonnage": 35943,
+        "startDay": 17.0,
+        "endDay": 22.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      }
+    ]
+  },
+  {
+    "id": "MP-03",
+    "name": "Berço 56 — Berço Público Multipropósito 27 (Paquetá)",
+    "sectorName": "Cais do Saboó / Paquetá",
+    "maxDraft": "13.0m",
+    "category": "MULTIPURPOSE",
+    "displayOrder": 56,
+    "schedules": [
+      {
+        "id": 140,
+        "shipName": "MV Multi Trader 59",
+        "unloadingProduct": "Bobinas e Cabos Submarinos",
+        "loadingProduct": "Tubos e Estruturas Metálicas",
+        "tonnage": 29238,
+        "startDay": 3.0,
+        "endDay": 7.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      },
+      {
+        "id": 141,
+        "shipName": "MV Sun Coast 85",
+        "unloadingProduct": "Equipamentos Industriais Pesados",
+        "loadingProduct": "Carga Geral Solta & Projeto",
+        "tonnage": 36517,
+        "startDay": 17.0,
+        "endDay": 19.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      },
+      {
+        "id": 142,
+        "shipName": "MV Global Carrier 55",
+        "unloadingProduct": "Transformadores & Turbinas Eólicas",
+        "loadingProduct": "Carga Geral Solta & Projeto",
+        "tonnage": 29430,
+        "startDay": 25.0,
+        "endDay": 28.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      }
+    ]
+  },
+  {
+    "id": "VC-01",
+    "name": "Berço 57 — TEV 1 (Terminal de Exportação de Veículos - Margem Esquerda)",
+    "sectorName": "Margem Esquerda (Guarujá)",
+    "maxDraft": "13.5m",
+    "category": "VEHICLES",
+    "displayOrder": 57,
+    "schedules": [
+      {
+        "id": 143,
+        "shipName": "MV Wallenius Wilhelmsen 83",
+        "unloadingProduct": "Caminhões & Escavadeiras Importadas",
+        "loadingProduct": "Tratores, Colheitadeiras & Ônibus",
+        "tonnage": 25791,
+        "startDay": 1.0,
+        "endDay": 6.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      },
+      {
+        "id": 144,
+        "shipName": "MV Höegh Target 12",
+        "unloadingProduct": "Veículos Elétricos/Híbridos Importados",
+        "loadingProduct": "Automóveis Exportação (Ro-Ro)",
+        "tonnage": 27116,
+        "startDay": 17.0,
+        "endDay": 22.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      },
+      {
+        "id": 145,
+        "shipName": "MV Grande Brasile 17",
+        "unloadingProduct": "Caminhões & Escavadeiras Importadas",
+        "loadingProduct": "Automóveis Exportação (Ro-Ro)",
+        "tonnage": 23449,
+        "startDay": 25.0,
+        "endDay": 29.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Prioridade"
+      }
+    ]
+  },
+  {
+    "id": "VC-02",
+    "name": "Berço 58 — TEV 2 (Terminal Ro-Ro Santos Brasil)",
+    "sectorName": "Margem Esquerda (Guarujá)",
+    "maxDraft": "13.5m",
+    "category": "VEHICLES",
+    "displayOrder": 58,
+    "schedules": [
+      {
+        "id": 146,
+        "shipName": "MV Glovis Crown 67",
+        "unloadingProduct": "Veículos Elétricos/Híbridos Importados",
+        "loadingProduct": "Automóveis Exportação (Ro-Ro)",
+        "tonnage": 30680,
+        "startDay": 2.0,
+        "endDay": 4.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      },
+      {
+        "id": 147,
+        "shipName": "MV Wallenius Wilhelmsen 68",
+        "unloadingProduct": "Veículos Elétricos/Híbridos Importados",
+        "loadingProduct": "Tratores, Colheitadeiras & Ônibus",
+        "tonnage": 28578,
+        "startDay": 5.0,
+        "endDay": 9.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      }
+    ]
+  },
+  {
+    "id": "PS-01",
+    "name": "Berço 59 — Concais (Terminal Marítimo de Passageiros Giusfredo Santini)",
+    "sectorName": "Outeirinhos — Concais",
+    "maxDraft": "12.5m",
+    "category": "PASSENGERS",
+    "displayOrder": 59,
+    "schedules": [
+      {
+        "id": 148,
+        "shipName": "MSC Grandiosa",
+        "unloadingProduct": "Desembarque Passageiros (4.900 pax)",
+        "loadingProduct": "Embarque Cruzeiro Sul (5.200 pax)",
+        "tonnage": 181000,
+        "startDay": 3.0,
+        "endDay": 6.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      },
+      {
+        "id": 149,
+        "shipName": "Costa Diadema",
+        "unloadingProduct": "Desembarque Turistas (4.200 pax)",
+        "loadingProduct": "Embarque Roteiro Nordeste (4.500 pax)",
+        "tonnage": 132500,
+        "startDay": 7.0,
+        "endDay": 10.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      },
+      {
+        "id": 150,
+        "shipName": "MSC Seaview",
+        "unloadingProduct": "Desembarque Passageiros (4.800 pax)",
+        "loadingProduct": "Embarque Cruzeiro Prata (5.000 pax)",
+        "tonnage": 153500,
+        "startDay": 18.0,
+        "endDay": 21.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      }
+    ]
+  },
+  {
+    "id": "OF-01",
+    "name": "Berço 60 — Base de Apoio Logístico Offshore (Pré-Sal Bacia de Santos)",
+    "sectorName": "Valongo / Outeirinhos Offshore",
+    "maxDraft": "13.5m",
+    "category": "OFFSHORE",
+    "displayOrder": 60,
+    "schedules": [
+      {
+        "id": 151,
+        "shipName": "PLSV Skandi Santos",
+        "unloadingProduct": "Bobinas Vazias & Equip. Subsea",
+        "loadingProduct": "Dutos Flexíveis & Umbilicais Offshore",
+        "tonnage": 24000,
+        "startDay": 2.0,
+        "endDay": 8.0,
+        "stripeColorHex": "#e74c3c",
+        "status": "Operando"
+      },
+      {
+        "id": 152,
+        "shipName": "PSV Bram Offshore",
+        "unloadingProduct": "Contentores Retorno de Plataforma",
+        "loadingProduct": "Suprimento de Plataformas & Diesel (Pré-Sal)",
+        "tonnage": 14500,
+        "startDay": 17.0,
+        "endDay": 21.0,
+        "stripeColorHex": "#2ecc71",
+        "status": "Confirmado"
+      },
+      {
+        "id": 153,
+        "shipName": "AHTS Far Scout",
+        "unloadingProduct": "Amarras & Âncoras de Manutenção",
+        "loadingProduct": "Árvores de Natal Molhadas (ANM)",
+        "tonnage": 19000,
+        "startDay": 25.0,
+        "endDay": 29.0,
+        "stripeColorHex": "#e67e22",
+        "status": "Programado"
+      }
+    ]
+  }
+]

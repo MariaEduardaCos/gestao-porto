@@ -1,0 +1,1370 @@
+[
+  {
+    "imoCode": "IMO-9810251",
+    "shipName": "AHTS Far Scout",
+    "vesselClass": "AHTS / PSV Suprimento Offshore",
+    "maxDraftMeters": "13.5m",
+    "defaultTonnage": 19000,
+    "defaultUnloadProduct": "Amarras & Âncoras de Manutenção",
+    "defaultLoadProduct": "Árvores de Natal Molhadas (ANM)"
+  },
+  {
+    "imoCode": "IMO-9810151",
+    "shipName": "CMA CGM Amazonas 59",
+    "vesselClass": "Post-Panamax Porta-Contêineres",
+    "maxDraftMeters": "15.0m",
+    "defaultTonnage": 58423,
+    "defaultUnloadProduct": "Contêineres Vazios Reposição",
+    "defaultLoadProduct": "Contêineres Reefer (Carnes/Frutas)"
+  },
+  {
+    "imoCode": "IMO-9810155",
+    "shipName": "COSCO Shipping Brazil 10",
+    "vesselClass": "Post-Panamax Porta-Contêineres",
+    "maxDraftMeters": "15.0m",
+    "defaultTonnage": 98858,
+    "defaultUnloadProduct": "Contêineres Maquinário Industrial",
+    "defaultLoadProduct": "Contêineres Reefer (Carnes/Frutas)"
+  },
+  {
+    "imoCode": "IMO-9810160",
+    "shipName": "COSCO Shipping Brazil 22",
+    "vesselClass": "Post-Panamax Porta-Contêineres",
+    "maxDraftMeters": "15.0m",
+    "defaultTonnage": 68808,
+    "defaultUnloadProduct": "Contêineres Químicos & Insumos",
+    "defaultLoadProduct": "Contêineres Reefer (Carnes/Frutas)"
+  },
+  {
+    "imoCode": "IMO-9810143",
+    "shipName": "COSCO Shipping Brazil 58",
+    "vesselClass": "Post-Panamax Porta-Contêineres",
+    "maxDraftMeters": "15.0m",
+    "defaultTonnage": 59471,
+    "defaultUnloadProduct": "Contêineres Químicos & Insumos",
+    "defaultLoadProduct": "Contêineres Manufaturados Export"
+  },
+  {
+    "imoCode": "IMO-9810137",
+    "shipName": "COSCO Shipping Brazil 65",
+    "vesselClass": "Post-Panamax Porta-Contêineres",
+    "maxDraftMeters": "15.0m",
+    "defaultTonnage": 56293,
+    "defaultUnloadProduct": "Contêineres Químicos & Insumos",
+    "defaultLoadProduct": "Contêineres Manufaturados Export"
+  },
+  {
+    "imoCode": "IMO-9810247",
+    "shipName": "Costa Diadema",
+    "vesselClass": "Transatlântico de Cruzeiro",
+    "maxDraftMeters": "12.5m",
+    "defaultTonnage": 132500,
+    "defaultUnloadProduct": "Desembarque Turistas (4.200 pax)",
+    "defaultLoadProduct": "Embarque Roteiro Nordeste (4.500 pax)"
+  },
+  {
+    "imoCode": "IMO-9810141",
+    "shipName": "Evergreen Express 70",
+    "vesselClass": "Post-Panamax Porta-Contêineres",
+    "maxDraftMeters": "15.0m",
+    "defaultTonnage": 55052,
+    "defaultUnloadProduct": "Contêineres Vazios Reposição",
+    "defaultLoadProduct": "Contêineres Café & Algodão (TEU)"
+  },
+  {
+    "imoCode": "IMO-9810152",
+    "shipName": "Evergreen Express 93",
+    "vesselClass": "Post-Panamax Porta-Contêineres",
+    "maxDraftMeters": "15.0m",
+    "defaultTonnage": 96651,
+    "defaultUnloadProduct": "Contêineres Importação (Eletrônicos/Autopeças)",
+    "defaultLoadProduct": "Contêineres Reefer (Carnes/Frutas)"
+  },
+  {
+    "imoCode": "IMO-9810154",
+    "shipName": "Hapag-Lloyd Rio 41",
+    "vesselClass": "Post-Panamax Porta-Contêineres",
+    "maxDraftMeters": "15.0m",
+    "defaultTonnage": 84348,
+    "defaultUnloadProduct": "Contêineres Importação (Eletrônicos/Autopeças)",
+    "defaultLoadProduct": "Cabotagem Manaus/Suape (TEU)"
+  },
+  {
+    "imoCode": "IMO-9810136",
+    "shipName": "Hapag-Lloyd Rio 51",
+    "vesselClass": "Post-Panamax Porta-Contêineres",
+    "maxDraftMeters": "15.0m",
+    "defaultTonnage": 73461,
+    "defaultUnloadProduct": "Contêineres Importação (Eletrônicos/Autopeças)",
+    "defaultLoadProduct": "Cabotagem Manaus/Suape (TEU)"
+  },
+  {
+    "imoCode": "IMO-9810159",
+    "shipName": "Hapag-Lloyd Rio 89",
+    "vesselClass": "Post-Panamax Porta-Contêineres",
+    "maxDraftMeters": "15.0m",
+    "defaultTonnage": 60055,
+    "defaultUnloadProduct": "Contêineres Importação (Eletrônicos/Autopeças)",
+    "defaultLoadProduct": "Cabotagem Manaus/Suape (TEU)"
+  },
+  {
+    "imoCode": "IMO-9810147",
+    "shipName": "Log-In Polaris 59",
+    "vesselClass": "Post-Panamax Porta-Contêineres",
+    "maxDraftMeters": "15.0m",
+    "defaultTonnage": 109351,
+    "defaultUnloadProduct": "Contêineres Vazios Reposição",
+    "defaultLoadProduct": "Contêineres Reefer (Carnes/Frutas)"
+  },
+  {
+    "imoCode": "IMO-9810142",
+    "shipName": "Log-In Polaris 67",
+    "vesselClass": "Post-Panamax Porta-Contêineres",
+    "maxDraftMeters": "15.0m",
+    "defaultTonnage": 104340,
+    "defaultUnloadProduct": "Contêineres Importação (Eletrônicos/Autopeças)",
+    "defaultLoadProduct": "Contêineres Reefer (Carnes/Frutas)"
+  },
+  {
+    "imoCode": "IMO-9810156",
+    "shipName": "Maersk Santos 34",
+    "vesselClass": "Post-Panamax Porta-Contêineres",
+    "maxDraftMeters": "15.0m",
+    "defaultTonnage": 96226,
+    "defaultUnloadProduct": "Contêineres Vazios Reposição",
+    "defaultLoadProduct": "Contêineres Reefer (Carnes/Frutas)"
+  },
+  {
+    "imoCode": "IMO-9810148",
+    "shipName": "Maersk Santos 73",
+    "vesselClass": "Post-Panamax Porta-Contêineres",
+    "maxDraftMeters": "15.0m",
+    "defaultTonnage": 80951,
+    "defaultUnloadProduct": "Contêineres Químicos & Insumos",
+    "defaultLoadProduct": "Contêineres Manufaturados Export"
+  },
+  {
+    "imoCode": "IMO-9810144",
+    "shipName": "Mercosul Suape 89",
+    "vesselClass": "Post-Panamax Porta-Contêineres",
+    "maxDraftMeters": "15.0m",
+    "defaultTonnage": 57279,
+    "defaultUnloadProduct": "Contêineres Importação (Eletrônicos/Autopeças)",
+    "defaultLoadProduct": "Contêineres Manufaturados Export"
+  },
+  {
+    "imoCode": "IMO-9810150",
+    "shipName": "Mercosul Suape 95",
+    "vesselClass": "Post-Panamax Porta-Contêineres",
+    "maxDraftMeters": "15.0m",
+    "defaultTonnage": 93723,
+    "defaultUnloadProduct": "Contêineres Químicos & Insumos",
+    "defaultLoadProduct": "Contêineres Manufaturados Export"
+  },
+  {
+    "imoCode": "IMO-9810246",
+    "shipName": "MSC Grandiosa",
+    "vesselClass": "Transatlântico de Cruzeiro",
+    "maxDraftMeters": "12.5m",
+    "defaultTonnage": 181000,
+    "defaultUnloadProduct": "Desembarque Passageiros (4.900 pax)",
+    "defaultLoadProduct": "Embarque Cruzeiro Sul (5.200 pax)"
+  },
+  {
+    "imoCode": "IMO-9810248",
+    "shipName": "MSC Seaview",
+    "vesselClass": "Transatlântico de Cruzeiro",
+    "maxDraftMeters": "12.5m",
+    "defaultTonnage": 153500,
+    "defaultUnloadProduct": "Desembarque Passageiros (4.800 pax)",
+    "defaultLoadProduct": "Embarque Cruzeiro Prata (5.000 pax)"
+  },
+  {
+    "imoCode": "IMO-9810153",
+    "shipName": "MSC Valparaíso 15",
+    "vesselClass": "Post-Panamax Porta-Contêineres",
+    "maxDraftMeters": "15.0m",
+    "defaultTonnage": 90489,
+    "defaultUnloadProduct": "Contêineres Maquinário Industrial",
+    "defaultLoadProduct": "Contêineres Reefer (Carnes/Frutas)"
+  },
+  {
+    "imoCode": "IMO-9810146",
+    "shipName": "MSC Valparaíso 51",
+    "vesselClass": "Post-Panamax Porta-Contêineres",
+    "maxDraftMeters": "15.0m",
+    "defaultTonnage": 82117,
+    "defaultUnloadProduct": "Contêineres Químicos & Insumos",
+    "defaultLoadProduct": "Contêineres Manufaturados Export"
+  },
+  {
+    "imoCode": "IMO-9810140",
+    "shipName": "MSC Valparaíso 72",
+    "vesselClass": "Post-Panamax Porta-Contêineres",
+    "maxDraftMeters": "15.0m",
+    "defaultTonnage": 66514,
+    "defaultUnloadProduct": "Contêineres Importação (Eletrônicos/Autopeças)",
+    "defaultLoadProduct": "Contêineres Manufaturados Export"
+  },
+  {
+    "imoCode": "IMO-9810198",
+    "shipName": "MT Alamoa Star 52",
+    "vesselClass": "MR2 / Suezmax Navio-Tanque",
+    "maxDraftMeters": "13.2m",
+    "defaultTonnage": 27055,
+    "defaultUnloadProduct": "Nafta Petroquímica",
+    "defaultLoadProduct": "Biodiesel B100"
+  },
+  {
+    "imoCode": "IMO-9810193",
+    "shipName": "MT Alamoa Star 60",
+    "vesselClass": "MR2 / Suezmax Navio-Tanque",
+    "maxDraftMeters": "13.2m",
+    "defaultTonnage": 49758,
+    "defaultUnloadProduct": "Metanol & Solventes",
+    "defaultLoadProduct": "Óleo Vegetal Refinado"
+  },
+  {
+    "imoCode": "IMO-9810186",
+    "shipName": "MT Alamoa Star 86",
+    "vesselClass": "MR2 / Suezmax Navio-Tanque",
+    "maxDraftMeters": "13.2m",
+    "defaultTonnage": 40258,
+    "defaultUnloadProduct": "Óleo Diesel S10 Importado",
+    "defaultLoadProduct": "Óleo Vegetal Refinado"
+  },
+  {
+    "imoCode": "IMO-9810187",
+    "shipName": "MT Bow Triumph 53",
+    "vesselClass": "MR2 / Suezmax Navio-Tanque",
+    "maxDraftMeters": "13.2m",
+    "defaultTonnage": 41819,
+    "defaultUnloadProduct": "GLP (Gás Liquefeito)",
+    "defaultLoadProduct": "Etanol Anidro Exportação"
+  },
+  {
+    "imoCode": "IMO-9810199",
+    "shipName": "MT Bow Triumph 78",
+    "vesselClass": "MR2 / Suezmax Navio-Tanque",
+    "maxDraftMeters": "13.2m",
+    "defaultTonnage": 27874,
+    "defaultUnloadProduct": "Nafta Petroquímica",
+    "defaultLoadProduct": "Óleo Combustível Marítimo (Bunker)"
+  },
+  {
+    "imoCode": "IMO-9810201",
+    "shipName": "MT Chemical Pioneer 24",
+    "vesselClass": "MR2 / Suezmax Navio-Tanque",
+    "maxDraftMeters": "13.2m",
+    "defaultTonnage": 35765,
+    "defaultUnloadProduct": "Óleo Diesel S10 Importado",
+    "defaultLoadProduct": "Óleo Combustível Marítimo (Bunker)"
+  },
+  {
+    "imoCode": "IMO-9810195",
+    "shipName": "MT Chemical Pioneer 92",
+    "vesselClass": "MR2 / Suezmax Navio-Tanque",
+    "maxDraftMeters": "13.2m",
+    "defaultTonnage": 45032,
+    "defaultUnloadProduct": "Óleo Diesel S10 Importado",
+    "defaultLoadProduct": "Óleo Combustível Marítimo (Bunker)"
+  },
+  {
+    "imoCode": "IMO-9810192",
+    "shipName": "MT Flumar Brasil 38",
+    "vesselClass": "MR2 / Suezmax Navio-Tanque",
+    "maxDraftMeters": "13.2m",
+    "defaultTonnage": 33976,
+    "defaultUnloadProduct": "Nafta Petroquímica",
+    "defaultLoadProduct": "Biodiesel B100"
+  },
+  {
+    "imoCode": "IMO-9810185",
+    "shipName": "MT Flumar Brasil 71",
+    "vesselClass": "MR2 / Suezmax Navio-Tanque",
+    "maxDraftMeters": "13.2m",
+    "defaultTonnage": 33272,
+    "defaultUnloadProduct": "Metanol & Solventes",
+    "defaultLoadProduct": "Óleo Vegetal Refinado"
+  },
+  {
+    "imoCode": "IMO-9810200",
+    "shipName": "MT Odfjell Spirit 10",
+    "vesselClass": "MR2 / Suezmax Navio-Tanque",
+    "maxDraftMeters": "13.2m",
+    "defaultTonnage": 39194,
+    "defaultUnloadProduct": "Óleo Diesel S10 Importado",
+    "defaultLoadProduct": "Óleo Combustível Marítimo (Bunker)"
+  },
+  {
+    "imoCode": "IMO-9810194",
+    "shipName": "MT Odfjell Spirit 26",
+    "vesselClass": "MR2 / Suezmax Navio-Tanque",
+    "maxDraftMeters": "13.2m",
+    "defaultTonnage": 46787,
+    "defaultUnloadProduct": "Soda Cáustica Líquida",
+    "defaultLoadProduct": "Óleo Vegetal Refinado"
+  },
+  {
+    "imoCode": "IMO-9810188",
+    "shipName": "MT Odfjell Spirit 62",
+    "vesselClass": "MR2 / Suezmax Navio-Tanque",
+    "maxDraftMeters": "13.2m",
+    "defaultTonnage": 31389,
+    "defaultUnloadProduct": "Óleo Diesel S10 Importado",
+    "defaultLoadProduct": "Biodiesel B100"
+  },
+  {
+    "imoCode": "IMO-9810196",
+    "shipName": "MT Petro Tanker 10",
+    "vesselClass": "MR2 / Suezmax Navio-Tanque",
+    "maxDraftMeters": "13.2m",
+    "defaultTonnage": 33547,
+    "defaultUnloadProduct": "Metanol & Solventes",
+    "defaultLoadProduct": "Óleo Vegetal Refinado"
+  },
+  {
+    "imoCode": "IMO-9810190",
+    "shipName": "MT Petro Tanker 53",
+    "vesselClass": "MR2 / Suezmax Navio-Tanque",
+    "maxDraftMeters": "13.2m",
+    "defaultTonnage": 25002,
+    "defaultUnloadProduct": "Metanol & Solventes",
+    "defaultLoadProduct": "Biodiesel B100"
+  },
+  {
+    "imoCode": "IMO-9810184",
+    "shipName": "MT Stolt Santos 31",
+    "vesselClass": "MR2 / Suezmax Navio-Tanque",
+    "maxDraftMeters": "13.2m",
+    "defaultTonnage": 28070,
+    "defaultUnloadProduct": "Soda Cáustica Líquida",
+    "defaultLoadProduct": "Óleo Combustível Marítimo (Bunker)"
+  },
+  {
+    "imoCode": "IMO-9810197",
+    "shipName": "MT Stolt Santos 59",
+    "vesselClass": "MR2 / Suezmax Navio-Tanque",
+    "maxDraftMeters": "13.2m",
+    "defaultTonnage": 47674,
+    "defaultUnloadProduct": "Metanol & Solventes",
+    "defaultLoadProduct": "Óleo Vegetal Refinado"
+  },
+  {
+    "imoCode": "IMO-9810191",
+    "shipName": "MT Stolt Santos 83",
+    "vesselClass": "MR2 / Suezmax Navio-Tanque",
+    "maxDraftMeters": "13.2m",
+    "defaultTonnage": 48269,
+    "defaultUnloadProduct": "Nafta Petroquímica",
+    "defaultLoadProduct": "Óleo Combustível Marítimo (Bunker)"
+  },
+  {
+    "imoCode": "IMO-9810189",
+    "shipName": "MT Transpetro Atlântico 87",
+    "vesselClass": "MR2 / Suezmax Navio-Tanque",
+    "maxDraftMeters": "13.2m",
+    "defaultTonnage": 42735,
+    "defaultUnloadProduct": "GLP (Gás Liquefeito)",
+    "defaultLoadProduct": "Óleo Combustível Marítimo (Bunker)"
+  },
+  {
+    "imoCode": "IMO-9810202",
+    "shipName": "MT Transpetro Atlântico 94",
+    "vesselClass": "MR2 / Suezmax Navio-Tanque",
+    "maxDraftMeters": "13.2m",
+    "defaultTonnage": 25760,
+    "defaultUnloadProduct": "Óleo Diesel S10 Importado",
+    "defaultLoadProduct": "Etanol Anidro Exportação"
+  },
+  {
+    "imoCode": "IMO-9810121",
+    "shipName": "MV Agro Pride 32",
+    "vesselClass": "Panamax Graneleiro (Bulk Carrier)",
+    "maxDraftMeters": "14.2m",
+    "defaultTonnage": 51393,
+    "defaultUnloadProduct": "Trigo Importação",
+    "defaultLoadProduct": "Soja Transgênica"
+  },
+  {
+    "imoCode": "IMO-9810130",
+    "shipName": "MV Agro Pride 44",
+    "vesselClass": "Panamax Graneleiro (Bulk Carrier)",
+    "maxDraftMeters": "14.2m",
+    "defaultTonnage": 51301,
+    "defaultUnloadProduct": "Nenhum (Lastro)",
+    "defaultLoadProduct": "Açúcar VHP"
+  },
+  {
+    "imoCode": "IMO-9810205",
+    "shipName": "MV Atlantic Forge 13",
+    "vesselClass": "Supramax Siderúrgico",
+    "maxDraftMeters": "14.0m",
+    "defaultTonnage": 34548,
+    "defaultUnloadProduct": "Chapas Grossas de Aço",
+    "defaultLoadProduct": "Fio-Máquina Siderúrgico"
+  },
+  {
+    "imoCode": "IMO-9810213",
+    "shipName": "MV Atlantic Forge 77",
+    "vesselClass": "Supramax Siderúrgico",
+    "maxDraftMeters": "14.0m",
+    "defaultTonnage": 56899,
+    "defaultUnloadProduct": "Sucata Metálica",
+    "defaultLoadProduct": "Placas de Aço Exportação"
+  },
+  {
+    "imoCode": "IMO-9810206",
+    "shipName": "MV Atlantic Forge 78",
+    "vesselClass": "Supramax Siderúrgico",
+    "maxDraftMeters": "14.0m",
+    "defaultTonnage": 47694,
+    "defaultUnloadProduct": "Trilhos Ferroviários Importados",
+    "defaultLoadProduct": "Bobinas de Aço Laminado"
+  },
+  {
+    "imoCode": "IMO-9810100",
+    "shipName": "MV Atlantic Star",
+    "vesselClass": "Panamax Graneleiro (Bulk Carrier)",
+    "maxDraftMeters": "14.2m",
+    "defaultTonnage": 68500,
+    "defaultUnloadProduct": "Trigo Importação",
+    "defaultLoadProduct": "Soja em Grãos"
+  },
+  {
+    "imoCode": "IMO-9810135",
+    "shipName": "MV Atlantic Star 10",
+    "vesselClass": "Panamax Graneleiro (Bulk Carrier)",
+    "maxDraftMeters": "14.2m",
+    "defaultTonnage": 67902,
+    "defaultUnloadProduct": "Milho Granel",
+    "defaultLoadProduct": "Açúcar VHP"
+  },
+  {
+    "imoCode": "IMO-9810104",
+    "shipName": "MV Atlantic Star 42",
+    "vesselClass": "Panamax Graneleiro (Bulk Carrier)",
+    "maxDraftMeters": "14.2m",
+    "defaultTonnage": 51269,
+    "defaultUnloadProduct": "Nenhum (Lastro)",
+    "defaultLoadProduct": "Soja Transgênica"
+  },
+  {
+    "imoCode": "IMO-9810128",
+    "shipName": "MV Atlantic Star 57",
+    "vesselClass": "Panamax Graneleiro (Bulk Carrier)",
+    "maxDraftMeters": "14.2m",
+    "defaultTonnage": 64818,
+    "defaultUnloadProduct": "Trigo Importação",
+    "defaultLoadProduct": "Farelo de Soja"
+  },
+  {
+    "imoCode": "IMO-9810103",
+    "shipName": "MV Brasil Express",
+    "vesselClass": "Panamax Graneleiro (Bulk Carrier)",
+    "maxDraftMeters": "14.2m",
+    "defaultTonnage": 61000,
+    "defaultUnloadProduct": "Trigo Argentino",
+    "defaultLoadProduct": "Açúcar VHP"
+  },
+  {
+    "imoCode": "IMO-9810105",
+    "shipName": "MV Brasil Express 42",
+    "vesselClass": "Panamax Graneleiro (Bulk Carrier)",
+    "maxDraftMeters": "14.2m",
+    "defaultTonnage": 57590,
+    "defaultUnloadProduct": "Fertilizante Agrícola",
+    "defaultLoadProduct": "Soja Transgênica"
+  },
+  {
+    "imoCode": "IMO-9810111",
+    "shipName": "MV Brasil Express 88",
+    "vesselClass": "Panamax Graneleiro (Bulk Carrier)",
+    "maxDraftMeters": "14.2m",
+    "defaultTonnage": 65438,
+    "defaultUnloadProduct": "Trigo Importação",
+    "defaultLoadProduct": "Milho Exportação"
+  },
+  {
+    "imoCode": "IMO-9810115",
+    "shipName": "MV Bulk Santos 29",
+    "vesselClass": "Panamax Graneleiro (Bulk Carrier)",
+    "maxDraftMeters": "14.2m",
+    "defaultTonnage": 59812,
+    "defaultUnloadProduct": "Malte de Cevada",
+    "defaultLoadProduct": "Soja em Grãos"
+  },
+  {
+    "imoCode": "IMO-9810123",
+    "shipName": "MV Bulk Santos 65",
+    "vesselClass": "Panamax Graneleiro (Bulk Carrier)",
+    "maxDraftMeters": "14.2m",
+    "defaultTonnage": 48824,
+    "defaultUnloadProduct": "Milho Granel",
+    "defaultLoadProduct": "Soja Transgênica"
+  },
+  {
+    "imoCode": "IMO-9810110",
+    "shipName": "MV Bulk Santos 80",
+    "vesselClass": "Panamax Graneleiro (Bulk Carrier)",
+    "maxDraftMeters": "14.2m",
+    "defaultTonnage": 55207,
+    "defaultUnloadProduct": "Fertilizante Agrícola",
+    "defaultLoadProduct": "Açúcar VHP"
+  },
+  {
+    "imoCode": "IMO-9810230",
+    "shipName": "MV Carlos Fischer 44",
+    "vesselClass": "Reefer Tanker Suco Cítrico",
+    "maxDraftMeters": "13.0m",
+    "defaultTonnage": 31100,
+    "defaultUnloadProduct": "Nenhum (Lastro)",
+    "defaultLoadProduct": "Suco Cítrico NFC Refrigerado"
+  },
+  {
+    "imoCode": "IMO-9810227",
+    "shipName": "MV Carlos Fischer 89",
+    "vesselClass": "Reefer Tanker Suco Cítrico",
+    "maxDraftMeters": "13.0m",
+    "defaultTonnage": 29166,
+    "defaultUnloadProduct": "Tambores Assépticos Vazios",
+    "defaultLoadProduct": "Óleo Essencial Cítrico & D-Limoneno"
+  },
+  {
+    "imoCode": "IMO-9810228",
+    "shipName": "MV Citrus Blossom 58",
+    "vesselClass": "Reefer Tanker Suco Cítrico",
+    "maxDraftMeters": "13.0m",
+    "defaultTonnage": 33071,
+    "defaultUnloadProduct": "Insumos de Refrigeração",
+    "defaultLoadProduct": "Suco Cítrico NFC Refrigerado"
+  },
+  {
+    "imoCode": "IMO-9810162",
+    "shipName": "MV Emerald Sea 14",
+    "vesselClass": "Handymax Especializado Celulose",
+    "maxDraftMeters": "13.8m",
+    "defaultTonnage": 62235,
+    "defaultUnloadProduct": "Bobinas de Papel Imprensa",
+    "defaultLoadProduct": "Papel Kraftliner Bobinas"
+  },
+  {
+    "imoCode": "IMO-9810177",
+    "shipName": "MV Emerald Sea 35",
+    "vesselClass": "Handymax Especializado Celulose",
+    "maxDraftMeters": "13.8m",
+    "defaultTonnage": 62183,
+    "defaultUnloadProduct": "Bobinas de Papel Imprensa",
+    "defaultLoadProduct": "Celulose Fibra Curta (Eucalipto)"
+  },
+  {
+    "imoCode": "IMO-9810169",
+    "shipName": "MV Emerald Sea 42",
+    "vesselClass": "Handymax Especializado Celulose",
+    "maxDraftMeters": "13.8m",
+    "defaultTonnage": 38341,
+    "defaultUnloadProduct": "Insumos Químicos de Branqueamento",
+    "defaultLoadProduct": "Fardos de Celulose Exportação"
+  },
+  {
+    "imoCode": "IMO-9810183",
+    "shipName": "MV Emerald Sea 65",
+    "vesselClass": "Handymax Especializado Celulose",
+    "maxDraftMeters": "13.8m",
+    "defaultTonnage": 44520,
+    "defaultUnloadProduct": "Nenhum (Lastro)",
+    "defaultLoadProduct": "Celulose Fibra Curta (Eucalipto)"
+  },
+  {
+    "imoCode": "IMO-9810207",
+    "shipName": "MV Gerdau Spirit 44",
+    "vesselClass": "Supramax Siderúrgico",
+    "maxDraftMeters": "14.0m",
+    "defaultTonnage": 48910,
+    "defaultUnloadProduct": "Sucata Metálica",
+    "defaultLoadProduct": "Placas de Aço Exportação"
+  },
+  {
+    "imoCode": "IMO-9810214",
+    "shipName": "MV Gerdau Spirit 96",
+    "vesselClass": "Supramax Siderúrgico",
+    "maxDraftMeters": "14.0m",
+    "defaultTonnage": 39544,
+    "defaultUnloadProduct": "Trilhos Ferroviários Importados",
+    "defaultLoadProduct": "Fio-Máquina Siderúrgico"
+  },
+  {
+    "imoCode": "IMO-9810240",
+    "shipName": "MV Global Carrier 55",
+    "vesselClass": "Multipurpose General Cargo",
+    "maxDraftMeters": "13.0m",
+    "defaultTonnage": 29430,
+    "defaultUnloadProduct": "Transformadores & Turbinas Eólicas",
+    "defaultLoadProduct": "Carga Geral Solta & Projeto"
+  },
+  {
+    "imoCode": "IMO-9810236",
+    "shipName": "MV Global Carrier 56",
+    "vesselClass": "Multipurpose General Cargo",
+    "maxDraftMeters": "13.0m",
+    "defaultTonnage": 23249,
+    "defaultUnloadProduct": "Transformadores & Turbinas Eólicas",
+    "defaultLoadProduct": "Carga Geral Solta & Projeto"
+  },
+  {
+    "imoCode": "IMO-9810233",
+    "shipName": "MV Global Carrier 77",
+    "vesselClass": "Multipurpose General Cargo",
+    "maxDraftMeters": "13.0m",
+    "defaultTonnage": 28229,
+    "defaultUnloadProduct": "Transformadores & Turbinas Eólicas",
+    "defaultLoadProduct": "Tubos e Estruturas Metálicas"
+  },
+  {
+    "imoCode": "IMO-9810244",
+    "shipName": "MV Glovis Crown 67",
+    "vesselClass": "PCTC Roll-on / Roll-off (Ro-Ro)",
+    "maxDraftMeters": "13.5m",
+    "defaultTonnage": 30680,
+    "defaultUnloadProduct": "Veículos Elétricos/Híbridos Importados",
+    "defaultLoadProduct": "Automóveis Exportação (Ro-Ro)"
+  },
+  {
+    "imoCode": "IMO-9810129",
+    "shipName": "MV Golden Grain 10",
+    "vesselClass": "Panamax Graneleiro (Bulk Carrier)",
+    "maxDraftMeters": "14.2m",
+    "defaultTonnage": 52068,
+    "defaultUnloadProduct": "Nenhum (Lastro)",
+    "defaultLoadProduct": "Milho Exportação"
+  },
+  {
+    "imoCode": "IMO-9810120",
+    "shipName": "MV Golden Grain 76",
+    "vesselClass": "Panamax Graneleiro (Bulk Carrier)",
+    "maxDraftMeters": "14.2m",
+    "defaultTonnage": 62413,
+    "defaultUnloadProduct": "Milho Granel",
+    "defaultLoadProduct": "Açúcar VHP"
+  },
+  {
+    "imoCode": "IMO-9810114",
+    "shipName": "MV Golden Grain 90",
+    "vesselClass": "Panamax Graneleiro (Bulk Carrier)",
+    "maxDraftMeters": "14.2m",
+    "defaultTonnage": 47645,
+    "defaultUnloadProduct": "Trigo Importação",
+    "defaultLoadProduct": "Soja em Grãos"
+  },
+  {
+    "imoCode": "IMO-9810225",
+    "shipName": "MV Golden Horizon 48",
+    "vesselClass": "Kamsarmax Graneleiro Mineral",
+    "maxDraftMeters": "13.5m",
+    "defaultTonnage": 38755,
+    "defaultUnloadProduct": "Cloreto de Potássio (Fertilizante KCl)",
+    "defaultLoadProduct": "Nenhum (Saída em Lastro)"
+  },
+  {
+    "imoCode": "IMO-9810218",
+    "shipName": "MV Golden Horizon 66",
+    "vesselClass": "Kamsarmax Graneleiro Mineral",
+    "maxDraftMeters": "13.5m",
+    "defaultTonnage": 56352,
+    "defaultUnloadProduct": "Sal Marinho Industrial",
+    "defaultLoadProduct": "Gesso Agrícola"
+  },
+  {
+    "imoCode": "IMO-9810243",
+    "shipName": "MV Grande Brasile 17",
+    "vesselClass": "PCTC Roll-on / Roll-off (Ro-Ro)",
+    "maxDraftMeters": "13.5m",
+    "defaultTonnage": 23449,
+    "defaultUnloadProduct": "Caminhões & Escavadeiras Importadas",
+    "defaultLoadProduct": "Automóveis Exportação (Ro-Ro)"
+  },
+  {
+    "imoCode": "IMO-9810170",
+    "shipName": "MV Grieg Bergen 38",
+    "vesselClass": "Handymax Especializado Celulose",
+    "maxDraftMeters": "13.8m",
+    "defaultTonnage": 54860,
+    "defaultUnloadProduct": "Nenhum (Lastro)",
+    "defaultLoadProduct": "Celulose Fibra Longa"
+  },
+  {
+    "imoCode": "IMO-9810178",
+    "shipName": "MV Grieg Bergen 39",
+    "vesselClass": "Handymax Especializado Celulose",
+    "maxDraftMeters": "13.8m",
+    "defaultTonnage": 58153,
+    "defaultUnloadProduct": "Insumos Químicos de Branqueamento",
+    "defaultLoadProduct": "Fardos de Celulose Exportação"
+  },
+  {
+    "imoCode": "IMO-9810163",
+    "shipName": "MV Grieg Bergen 50",
+    "vesselClass": "Handymax Especializado Celulose",
+    "maxDraftMeters": "13.8m",
+    "defaultTonnage": 42981,
+    "defaultUnloadProduct": "Equipamentos Florestais",
+    "defaultLoadProduct": "Fardos de Celulose Exportação"
+  },
+  {
+    "imoCode": "IMO-9810242",
+    "shipName": "MV Höegh Target 12",
+    "vesselClass": "PCTC Roll-on / Roll-off (Ro-Ro)",
+    "maxDraftMeters": "13.5m",
+    "defaultTonnage": 27116,
+    "defaultUnloadProduct": "Veículos Elétricos/Híbridos Importados",
+    "defaultLoadProduct": "Automóveis Exportação (Ro-Ro)"
+  },
+  {
+    "imoCode": "IMO-9810203",
+    "shipName": "MV Iron Voyager 11",
+    "vesselClass": "Supramax Siderúrgico",
+    "maxDraftMeters": "14.0m",
+    "defaultTonnage": 43325,
+    "defaultUnloadProduct": "Sucata Metálica",
+    "defaultLoadProduct": "Vergalhões e Perfis Estruturais"
+  },
+  {
+    "imoCode": "IMO-9810210",
+    "shipName": "MV Iron Voyager 43",
+    "vesselClass": "Supramax Siderúrgico",
+    "maxDraftMeters": "14.0m",
+    "defaultTonnage": 39153,
+    "defaultUnloadProduct": "Sucata Metálica",
+    "defaultLoadProduct": "Bobinas de Aço Laminado"
+  },
+  {
+    "imoCode": "IMO-9810216",
+    "shipName": "MV Iron Voyager 46",
+    "vesselClass": "Supramax Siderúrgico",
+    "maxDraftMeters": "14.0m",
+    "defaultTonnage": 52902,
+    "defaultUnloadProduct": "Trilhos Ferroviários Importados",
+    "defaultLoadProduct": "Placas de Aço Exportação"
+  },
+  {
+    "imoCode": "IMO-9810171",
+    "shipName": "MV Klabin Spirit 24",
+    "vesselClass": "Handymax Especializado Celulose",
+    "maxDraftMeters": "13.8m",
+    "defaultTonnage": 41222,
+    "defaultUnloadProduct": "Bobinas de Papel Imprensa",
+    "defaultLoadProduct": "Papel Kraftliner Bobinas"
+  },
+  {
+    "imoCode": "IMO-9810164",
+    "shipName": "MV Klabin Spirit 55",
+    "vesselClass": "Handymax Especializado Celulose",
+    "maxDraftMeters": "13.8m",
+    "defaultTonnage": 42938,
+    "defaultUnloadProduct": "Nenhum (Lastro)",
+    "defaultLoadProduct": "Papel Kraftliner Bobinas"
+  },
+  {
+    "imoCode": "IMO-9810179",
+    "shipName": "MV Klabin Spirit 86",
+    "vesselClass": "Handymax Especializado Celulose",
+    "maxDraftMeters": "13.8m",
+    "defaultTonnage": 64371,
+    "defaultUnloadProduct": "Nenhum (Lastro)",
+    "defaultLoadProduct": "Celulose Fibra Curta (Eucalipto)"
+  },
+  {
+    "imoCode": "IMO-9810221",
+    "shipName": "MV Mineral Express 82",
+    "vesselClass": "Kamsarmax Graneleiro Mineral",
+    "maxDraftMeters": "13.5m",
+    "defaultTonnage": 51835,
+    "defaultUnloadProduct": "Enxofre a Granel",
+    "defaultLoadProduct": "Gesso Agrícola"
+  },
+  {
+    "imoCode": "IMO-9810238",
+    "shipName": "MV Multi Trader 59",
+    "vesselClass": "Multipurpose General Cargo",
+    "maxDraftMeters": "13.0m",
+    "defaultTonnage": 29238,
+    "defaultUnloadProduct": "Bobinas e Cabos Submarinos",
+    "defaultLoadProduct": "Tubos e Estruturas Metálicas"
+  },
+  {
+    "imoCode": "IMO-9810102",
+    "shipName": "MV Nordic Trader",
+    "vesselClass": "Panamax Graneleiro (Bulk Carrier)",
+    "maxDraftMeters": "14.2m",
+    "defaultTonnage": 49000,
+    "defaultUnloadProduct": "Fertilizante Agrícola",
+    "defaultLoadProduct": "Farelo de Soja"
+  },
+  {
+    "imoCode": "IMO-9810109",
+    "shipName": "MV Nordic Trader 90",
+    "vesselClass": "Panamax Graneleiro (Bulk Carrier)",
+    "maxDraftMeters": "14.2m",
+    "defaultTonnage": 50198,
+    "defaultUnloadProduct": "Trigo Importação",
+    "defaultLoadProduct": "Soja Transgênica"
+  },
+  {
+    "imoCode": "IMO-9810101",
+    "shipName": "MV Ocean Pioneer",
+    "vesselClass": "Panamax Graneleiro (Bulk Carrier)",
+    "maxDraftMeters": "14.2m",
+    "defaultTonnage": 52000,
+    "defaultUnloadProduct": "Malte de Cevada",
+    "defaultLoadProduct": "Milho Exportação"
+  },
+  {
+    "imoCode": "IMO-9810122",
+    "shipName": "MV Ocean Pioneer 60",
+    "vesselClass": "Panamax Graneleiro (Bulk Carrier)",
+    "maxDraftMeters": "14.2m",
+    "defaultTonnage": 55041,
+    "defaultUnloadProduct": "Trigo Importação",
+    "defaultLoadProduct": "Soja em Grãos"
+  },
+  {
+    "imoCode": "IMO-9810107",
+    "shipName": "MV Ocean Pioneer 63",
+    "vesselClass": "Panamax Graneleiro (Bulk Carrier)",
+    "maxDraftMeters": "14.2m",
+    "defaultTonnage": 62633,
+    "defaultUnloadProduct": "Trigo Importação",
+    "defaultLoadProduct": "Soja em Grãos"
+  },
+  {
+    "imoCode": "IMO-9810131",
+    "shipName": "MV Ocean Pioneer 89",
+    "vesselClass": "Panamax Graneleiro (Bulk Carrier)",
+    "maxDraftMeters": "14.2m",
+    "defaultTonnage": 54579,
+    "defaultUnloadProduct": "Trigo Importação",
+    "defaultLoadProduct": "Farelo de Soja"
+  },
+  {
+    "imoCode": "IMO-9810231",
+    "shipName": "MV Orange Sun 47",
+    "vesselClass": "Reefer Tanker Suco Cítrico",
+    "maxDraftMeters": "13.0m",
+    "defaultTonnage": 29464,
+    "defaultUnloadProduct": "Nenhum (Lastro)",
+    "defaultLoadProduct": "Suco Cítrico NFC Refrigerado"
+  },
+  {
+    "imoCode": "IMO-9810229",
+    "shipName": "MV Ouro Verde 27",
+    "vesselClass": "Reefer Tanker Suco Cítrico",
+    "maxDraftMeters": "13.0m",
+    "defaultTonnage": 35853,
+    "defaultUnloadProduct": "Insumos de Refrigeração",
+    "defaultLoadProduct": "Óleo Essencial Cítrico & D-Limoneno"
+  },
+  {
+    "imoCode": "IMO-9810232",
+    "shipName": "MV Ouro Verde 93",
+    "vesselClass": "Reefer Tanker Suco Cítrico",
+    "maxDraftMeters": "13.0m",
+    "defaultTonnage": 37787,
+    "defaultUnloadProduct": "Nenhum (Lastro)",
+    "defaultLoadProduct": "Suco Cítrico NFC Refrigerado"
+  },
+  {
+    "imoCode": "IMO-9810132",
+    "shipName": "MV Pacific Harvest 13",
+    "vesselClass": "Panamax Graneleiro (Bulk Carrier)",
+    "maxDraftMeters": "14.2m",
+    "defaultTonnage": 57286,
+    "defaultUnloadProduct": "Milho Granel",
+    "defaultLoadProduct": "Soja Transgênica"
+  },
+  {
+    "imoCode": "IMO-9810116",
+    "shipName": "MV Pacific Harvest 34",
+    "vesselClass": "Panamax Graneleiro (Bulk Carrier)",
+    "maxDraftMeters": "14.2m",
+    "defaultTonnage": 61486,
+    "defaultUnloadProduct": "Fertilizante Agrícola",
+    "defaultLoadProduct": "Milho Exportação"
+  },
+  {
+    "imoCode": "IMO-9810124",
+    "shipName": "MV Pacific Harvest 54",
+    "vesselClass": "Panamax Graneleiro (Bulk Carrier)",
+    "maxDraftMeters": "14.2m",
+    "defaultTonnage": 50536,
+    "defaultUnloadProduct": "Nenhum (Lastro)",
+    "defaultLoadProduct": "Soja Transgênica"
+  },
+  {
+    "imoCode": "IMO-9810117",
+    "shipName": "MV Pampa Bulk 14",
+    "vesselClass": "Panamax Graneleiro (Bulk Carrier)",
+    "maxDraftMeters": "14.2m",
+    "defaultTonnage": 71804,
+    "defaultUnloadProduct": "Fertilizante Agrícola",
+    "defaultLoadProduct": "Soja Transgênica"
+  },
+  {
+    "imoCode": "IMO-9810133",
+    "shipName": "MV Pampa Bulk 52",
+    "vesselClass": "Panamax Graneleiro (Bulk Carrier)",
+    "maxDraftMeters": "14.2m",
+    "defaultTonnage": 67875,
+    "defaultUnloadProduct": "Trigo Importação",
+    "defaultLoadProduct": "Soja Transgênica"
+  },
+  {
+    "imoCode": "IMO-9810125",
+    "shipName": "MV Pampa Bulk 98",
+    "vesselClass": "Panamax Graneleiro (Bulk Carrier)",
+    "maxDraftMeters": "14.2m",
+    "defaultTonnage": 54907,
+    "defaultUnloadProduct": "Fertilizante Agrícola",
+    "defaultLoadProduct": "Milho Exportação"
+  },
+  {
+    "imoCode": "IMO-9810106",
+    "shipName": "MV Panamax Ceres 19",
+    "vesselClass": "Panamax Graneleiro (Bulk Carrier)",
+    "maxDraftMeters": "14.2m",
+    "defaultTonnage": 66527,
+    "defaultUnloadProduct": "Trigo Importação",
+    "defaultLoadProduct": "Açúcar VHP"
+  },
+  {
+    "imoCode": "IMO-9810118",
+    "shipName": "MV Panamax Ceres 62",
+    "vesselClass": "Panamax Graneleiro (Bulk Carrier)",
+    "maxDraftMeters": "14.2m",
+    "defaultTonnage": 59855,
+    "defaultUnloadProduct": "Trigo Importação",
+    "defaultLoadProduct": "Soja em Grãos"
+  },
+  {
+    "imoCode": "IMO-9810112",
+    "shipName": "MV Panamax Ceres 63",
+    "vesselClass": "Panamax Graneleiro (Bulk Carrier)",
+    "maxDraftMeters": "14.2m",
+    "defaultTonnage": 45455,
+    "defaultUnloadProduct": "Milho Granel",
+    "defaultLoadProduct": "Soja Transgênica"
+  },
+  {
+    "imoCode": "IMO-9810126",
+    "shipName": "MV Panamax Ceres 82",
+    "vesselClass": "Panamax Graneleiro (Bulk Carrier)",
+    "maxDraftMeters": "14.2m",
+    "defaultTonnage": 52111,
+    "defaultUnloadProduct": "Milho Granel",
+    "defaultLoadProduct": "Farelo de Soja"
+  },
+  {
+    "imoCode": "IMO-9810224",
+    "shipName": "MV Potash Star 15",
+    "vesselClass": "Kamsarmax Graneleiro Mineral",
+    "maxDraftMeters": "13.5m",
+    "defaultTonnage": 58883,
+    "defaultUnloadProduct": "Fosfato (MAP/DAP)",
+    "defaultLoadProduct": "Nenhum (Saída em Lastro)"
+  },
+  {
+    "imoCode": "IMO-9810217",
+    "shipName": "MV Potash Star 56",
+    "vesselClass": "Kamsarmax Graneleiro Mineral",
+    "maxDraftMeters": "13.5m",
+    "defaultTonnage": 56102,
+    "defaultUnloadProduct": "Cloreto de Potássio (Fertilizante KCl)",
+    "defaultLoadProduct": "Calcário Agrícola"
+  },
+  {
+    "imoCode": "IMO-9810180",
+    "shipName": "MV Pulp Carrier I 68",
+    "vesselClass": "Handymax Especializado Celulose",
+    "maxDraftMeters": "13.8m",
+    "defaultTonnage": 58576,
+    "defaultUnloadProduct": "Equipamentos Florestais",
+    "defaultLoadProduct": "Celulose Fibra Longa"
+  },
+  {
+    "imoCode": "IMO-9810173",
+    "shipName": "MV Pulp Carrier I 82",
+    "vesselClass": "Handymax Especializado Celulose",
+    "maxDraftMeters": "13.8m",
+    "defaultTonnage": 48977,
+    "defaultUnloadProduct": "Bobinas de Papel Imprensa",
+    "defaultLoadProduct": "Fardos de Celulose Exportação"
+  },
+  {
+    "imoCode": "IMO-9810166",
+    "shipName": "MV Pulp Carrier I 84",
+    "vesselClass": "Handymax Especializado Celulose",
+    "maxDraftMeters": "13.8m",
+    "defaultTonnage": 59214,
+    "defaultUnloadProduct": "Bobinas de Papel Imprensa",
+    "defaultLoadProduct": "Papel Kraftliner Bobinas"
+  },
+  {
+    "imoCode": "IMO-9810181",
+    "shipName": "MV Saga Fram 17",
+    "vesselClass": "Handymax Especializado Celulose",
+    "maxDraftMeters": "13.8m",
+    "defaultTonnage": 64464,
+    "defaultUnloadProduct": "Equipamentos Florestais",
+    "defaultLoadProduct": "Papel Kraftliner Bobinas"
+  },
+  {
+    "imoCode": "IMO-9810167",
+    "shipName": "MV Saga Fram 41",
+    "vesselClass": "Handymax Especializado Celulose",
+    "maxDraftMeters": "13.8m",
+    "defaultTonnage": 64356,
+    "defaultUnloadProduct": "Bobinas de Papel Imprensa",
+    "defaultLoadProduct": "Papel Kraftliner Bobinas"
+  },
+  {
+    "imoCode": "IMO-9810174",
+    "shipName": "MV Saga Fram 65",
+    "vesselClass": "Handymax Especializado Celulose",
+    "maxDraftMeters": "13.8m",
+    "defaultTonnage": 45879,
+    "defaultUnloadProduct": "Insumos Químicos de Branqueamento",
+    "defaultLoadProduct": "Papel Kraftliner Bobinas"
+  },
+  {
+    "imoCode": "IMO-9810165",
+    "shipName": "MV Saga Wind 36",
+    "vesselClass": "Handymax Especializado Celulose",
+    "maxDraftMeters": "13.8m",
+    "defaultTonnage": 57275,
+    "defaultUnloadProduct": "Nenhum (Lastro)",
+    "defaultLoadProduct": "Celulose Fibra Longa"
+  },
+  {
+    "imoCode": "IMO-9810172",
+    "shipName": "MV Saga Wind 64",
+    "vesselClass": "Handymax Especializado Celulose",
+    "maxDraftMeters": "13.8m",
+    "defaultTonnage": 52339,
+    "defaultUnloadProduct": "Bobinas de Papel Imprensa",
+    "defaultLoadProduct": "Papel Kraftliner Bobinas"
+  },
+  {
+    "imoCode": "IMO-9810223",
+    "shipName": "MV Salt Carrier 18",
+    "vesselClass": "Kamsarmax Graneleiro Mineral",
+    "maxDraftMeters": "13.5m",
+    "defaultTonnage": 38067,
+    "defaultUnloadProduct": "Fosfato (MAP/DAP)",
+    "defaultLoadProduct": "Gesso Agrícola"
+  },
+  {
+    "imoCode": "IMO-9810222",
+    "shipName": "MV Salt Carrier 41",
+    "vesselClass": "Kamsarmax Graneleiro Mineral",
+    "maxDraftMeters": "13.5m",
+    "defaultTonnage": 46040,
+    "defaultUnloadProduct": "Ureia Granulada",
+    "defaultLoadProduct": "Minério de Bauxita"
+  },
+  {
+    "imoCode": "IMO-9810234",
+    "shipName": "MV Santos Explorer 31",
+    "vesselClass": "Multipurpose General Cargo",
+    "maxDraftMeters": "13.0m",
+    "defaultTonnage": 21846,
+    "defaultUnloadProduct": "Equipamentos Industriais Pesados",
+    "defaultLoadProduct": "Tubos e Estruturas Metálicas"
+  },
+  {
+    "imoCode": "IMO-9810237",
+    "shipName": "MV Santos Explorer 98",
+    "vesselClass": "Multipurpose General Cargo",
+    "maxDraftMeters": "13.0m",
+    "defaultTonnage": 35943,
+    "defaultUnloadProduct": "Equipamentos Industriais Pesados",
+    "defaultLoadProduct": "Carga Geral Solta & Projeto"
+  },
+  {
+    "imoCode": "IMO-9810119",
+    "shipName": "MV Southern Cross 10",
+    "vesselClass": "Panamax Graneleiro (Bulk Carrier)",
+    "maxDraftMeters": "14.2m",
+    "defaultTonnage": 62741,
+    "defaultUnloadProduct": "Nenhum (Lastro)",
+    "defaultLoadProduct": "Soja em Grãos"
+  },
+  {
+    "imoCode": "IMO-9810127",
+    "shipName": "MV Southern Cross 28",
+    "vesselClass": "Panamax Graneleiro (Bulk Carrier)",
+    "maxDraftMeters": "14.2m",
+    "defaultTonnage": 66676,
+    "defaultUnloadProduct": "Fertilizante Agrícola",
+    "defaultLoadProduct": "Milho Exportação"
+  },
+  {
+    "imoCode": "IMO-9810134",
+    "shipName": "MV Southern Cross 37",
+    "vesselClass": "Panamax Graneleiro (Bulk Carrier)",
+    "maxDraftMeters": "14.2m",
+    "defaultTonnage": 70676,
+    "defaultUnloadProduct": "Malte de Cevada",
+    "defaultLoadProduct": "Milho Exportação"
+  },
+  {
+    "imoCode": "IMO-9810108",
+    "shipName": "MV Star Gran 72",
+    "vesselClass": "Panamax Graneleiro (Bulk Carrier)",
+    "maxDraftMeters": "14.2m",
+    "defaultTonnage": 57666,
+    "defaultUnloadProduct": "Malte de Cevada",
+    "defaultLoadProduct": "Milho Exportação"
+  },
+  {
+    "imoCode": "IMO-9810113",
+    "shipName": "MV Star Gran 89",
+    "vesselClass": "Panamax Graneleiro (Bulk Carrier)",
+    "maxDraftMeters": "14.2m",
+    "defaultTonnage": 70975,
+    "defaultUnloadProduct": "Malte de Cevada",
+    "defaultLoadProduct": "Farelo de Soja"
+  },
+  {
+    "imoCode": "IMO-9810168",
+    "shipName": "MV Star Lygra 61",
+    "vesselClass": "Handymax Especializado Celulose",
+    "maxDraftMeters": "13.8m",
+    "defaultTonnage": 63981,
+    "defaultUnloadProduct": "Insumos Químicos de Branqueamento",
+    "defaultLoadProduct": "Celulose Fibra Longa"
+  },
+  {
+    "imoCode": "IMO-9810175",
+    "shipName": "MV Star Lygra 79",
+    "vesselClass": "Handymax Especializado Celulose",
+    "maxDraftMeters": "13.8m",
+    "defaultTonnage": 55078,
+    "defaultUnloadProduct": "Nenhum (Lastro)",
+    "defaultLoadProduct": "Celulose Fibra Longa"
+  },
+  {
+    "imoCode": "IMO-9810209",
+    "shipName": "MV Steel Navigator 84",
+    "vesselClass": "Supramax Siderúrgico",
+    "maxDraftMeters": "14.0m",
+    "defaultTonnage": 44645,
+    "defaultUnloadProduct": "Chapas Grossas de Aço",
+    "defaultLoadProduct": "Bobinas de Aço Laminado"
+  },
+  {
+    "imoCode": "IMO-9810208",
+    "shipName": "MV Steel Navigator 86",
+    "vesselClass": "Supramax Siderúrgico",
+    "maxDraftMeters": "14.0m",
+    "defaultTonnage": 57202,
+    "defaultUnloadProduct": "Chapas Grossas de Aço",
+    "defaultLoadProduct": "Vergalhões e Perfis Estruturais"
+  },
+  {
+    "imoCode": "IMO-9810215",
+    "shipName": "MV Steel Navigator 94",
+    "vesselClass": "Supramax Siderúrgico",
+    "maxDraftMeters": "14.0m",
+    "defaultTonnage": 56189,
+    "defaultUnloadProduct": "Carvão Metalúrgico (Coque)",
+    "defaultLoadProduct": "Placas de Aço Exportação"
+  },
+  {
+    "imoCode": "IMO-9810220",
+    "shipName": "MV Sulfur Queen 27",
+    "vesselClass": "Kamsarmax Graneleiro Mineral",
+    "maxDraftMeters": "13.5m",
+    "defaultTonnage": 43891,
+    "defaultUnloadProduct": "Cloreto de Potássio (Fertilizante KCl)",
+    "defaultLoadProduct": "Nenhum (Saída em Lastro)"
+  },
+  {
+    "imoCode": "IMO-9810219",
+    "shipName": "MV Sulfur Queen 44",
+    "vesselClass": "Kamsarmax Graneleiro Mineral",
+    "maxDraftMeters": "13.5m",
+    "defaultTonnage": 57684,
+    "defaultUnloadProduct": "Enxofre a Granel",
+    "defaultLoadProduct": "Gesso Agrícola"
+  },
+  {
+    "imoCode": "IMO-9810226",
+    "shipName": "MV Sulfur Queen 57",
+    "vesselClass": "Kamsarmax Graneleiro Mineral",
+    "maxDraftMeters": "13.5m",
+    "defaultTonnage": 55466,
+    "defaultUnloadProduct": "Enxofre a Granel",
+    "defaultLoadProduct": "Nenhum (Saída em Lastro)"
+  },
+  {
+    "imoCode": "IMO-9810235",
+    "shipName": "MV Sun Coast 70",
+    "vesselClass": "Multipurpose General Cargo",
+    "maxDraftMeters": "13.0m",
+    "defaultTonnage": 28929,
+    "defaultUnloadProduct": "Bobinas e Cabos Submarinos",
+    "defaultLoadProduct": "Big Bags de Açúcar/Café"
+  },
+  {
+    "imoCode": "IMO-9810239",
+    "shipName": "MV Sun Coast 85",
+    "vesselClass": "Multipurpose General Cargo",
+    "maxDraftMeters": "13.0m",
+    "defaultTonnage": 36517,
+    "defaultUnloadProduct": "Equipamentos Industriais Pesados",
+    "defaultLoadProduct": "Carga Geral Solta & Projeto"
+  },
+  {
+    "imoCode": "IMO-9810176",
+    "shipName": "MV Suzano Horizon 79",
+    "vesselClass": "Handymax Especializado Celulose",
+    "maxDraftMeters": "13.8m",
+    "defaultTonnage": 43992,
+    "defaultUnloadProduct": "Nenhum (Lastro)",
+    "defaultLoadProduct": "Celulose Fibra Curta (Eucalipto)"
+  },
+  {
+    "imoCode": "IMO-9810161",
+    "shipName": "MV Suzano Horizon 84",
+    "vesselClass": "Handymax Especializado Celulose",
+    "maxDraftMeters": "13.8m",
+    "defaultTonnage": 44661,
+    "defaultUnloadProduct": "Nenhum (Lastro)",
+    "defaultLoadProduct": "Fardos de Celulose Exportação"
+  },
+  {
+    "imoCode": "IMO-9810182",
+    "shipName": "MV Suzano Horizon 98",
+    "vesselClass": "Handymax Especializado Celulose",
+    "maxDraftMeters": "13.8m",
+    "defaultTonnage": 63624,
+    "defaultUnloadProduct": "Equipamentos Florestais",
+    "defaultLoadProduct": "Fardos de Celulose Exportação"
+  },
+  {
+    "imoCode": "IMO-9810212",
+    "shipName": "MV Usiminas Pride 15",
+    "vesselClass": "Supramax Siderúrgico",
+    "maxDraftMeters": "14.0m",
+    "defaultTonnage": 47662,
+    "defaultUnloadProduct": "Trilhos Ferroviários Importados",
+    "defaultLoadProduct": "Placas de Aço Exportação"
+  },
+  {
+    "imoCode": "IMO-9810211",
+    "shipName": "MV Usiminas Pride 22",
+    "vesselClass": "Supramax Siderúrgico",
+    "maxDraftMeters": "14.0m",
+    "defaultTonnage": 33824,
+    "defaultUnloadProduct": "Carvão Metalúrgico (Coque)",
+    "defaultLoadProduct": "Bobinas de Aço Laminado"
+  },
+  {
+    "imoCode": "IMO-9810204",
+    "shipName": "MV Usiminas Pride 79",
+    "vesselClass": "Supramax Siderúrgico",
+    "maxDraftMeters": "14.0m",
+    "defaultTonnage": 40935,
+    "defaultUnloadProduct": "Sucata Metálica",
+    "defaultLoadProduct": "Vergalhões e Perfis Estruturais"
+  },
+  {
+    "imoCode": "IMO-9810245",
+    "shipName": "MV Wallenius Wilhelmsen 68",
+    "vesselClass": "PCTC Roll-on / Roll-off (Ro-Ro)",
+    "maxDraftMeters": "13.5m",
+    "defaultTonnage": 28578,
+    "defaultUnloadProduct": "Veículos Elétricos/Híbridos Importados",
+    "defaultLoadProduct": "Tratores, Colheitadeiras & Ônibus"
+  },
+  {
+    "imoCode": "IMO-9810241",
+    "shipName": "MV Wallenius Wilhelmsen 83",
+    "vesselClass": "PCTC Roll-on / Roll-off (Ro-Ro)",
+    "maxDraftMeters": "13.5m",
+    "defaultTonnage": 25791,
+    "defaultUnloadProduct": "Caminhões & Escavadeiras Importadas",
+    "defaultLoadProduct": "Tratores, Colheitadeiras & Ônibus"
+  },
+  {
+    "imoCode": "IMO-9810157",
+    "shipName": "ONE Iguaçu 34",
+    "vesselClass": "Post-Panamax Porta-Contêineres",
+    "maxDraftMeters": "15.0m",
+    "defaultTonnage": 88487,
+    "defaultUnloadProduct": "Contêineres Químicos & Insumos",
+    "defaultLoadProduct": "Contêineres Café & Algodão (TEU)"
+  },
+  {
+    "imoCode": "IMO-9810149",
+    "shipName": "ONE Iguaçu 38",
+    "vesselClass": "Post-Panamax Porta-Contêineres",
+    "maxDraftMeters": "15.0m",
+    "defaultTonnage": 60746,
+    "defaultUnloadProduct": "Contêineres Químicos & Insumos",
+    "defaultLoadProduct": "Contêineres Reefer (Carnes/Frutas)"
+  },
+  {
+    "imoCode": "IMO-9810138",
+    "shipName": "ONE Iguaçu 60",
+    "vesselClass": "Post-Panamax Porta-Contêineres",
+    "maxDraftMeters": "15.0m",
+    "defaultTonnage": 63342,
+    "defaultUnloadProduct": "Contêineres Vazios Reposição",
+    "defaultLoadProduct": "Cabotagem Manaus/Suape (TEU)"
+  },
+  {
+    "imoCode": "IMO-9810249",
+    "shipName": "PLSV Skandi Santos",
+    "vesselClass": "AHTS / PSV Suprimento Offshore",
+    "maxDraftMeters": "13.5m",
+    "defaultTonnage": 24000,
+    "defaultUnloadProduct": "Bobinas Vazias & Equip. Subsea",
+    "defaultLoadProduct": "Dutos Flexíveis & Umbilicais Offshore"
+  },
+  {
+    "imoCode": "IMO-9810250",
+    "shipName": "PSV Bram Offshore",
+    "vesselClass": "AHTS / PSV Suprimento Offshore",
+    "maxDraftMeters": "13.5m",
+    "defaultTonnage": 14500,
+    "defaultUnloadProduct": "Contentores Retorno de Plataforma",
+    "defaultLoadProduct": "Suprimento de Plataformas & Diesel (Pré-Sal)"
+  },
+  {
+    "imoCode": "IMO-9810139",
+    "shipName": "ZIM Atlântico 37",
+    "vesselClass": "Post-Panamax Porta-Contêineres",
+    "maxDraftMeters": "15.0m",
+    "defaultTonnage": 105711,
+    "defaultUnloadProduct": "Contêineres Importação (Eletrônicos/Autopeças)",
+    "defaultLoadProduct": "Contêineres Café & Algodão (TEU)"
+  },
+  {
+    "imoCode": "IMO-9810158",
+    "shipName": "ZIM Atlântico 40",
+    "vesselClass": "Post-Panamax Porta-Contêineres",
+    "maxDraftMeters": "15.0m",
+    "defaultTonnage": 76788,
+    "defaultUnloadProduct": "Contêineres Importação (Eletrônicos/Autopeças)",
+    "defaultLoadProduct": "Contêineres Café & Algodão (TEU)"
+  },
+  {
+    "imoCode": "IMO-9810145",
+    "shipName": "ZIM Atlântico 81",
+    "vesselClass": "Post-Panamax Porta-Contêineres",
+    "maxDraftMeters": "15.0m",
+    "defaultTonnage": 85240,
+    "defaultUnloadProduct": "Contêineres Químicos & Insumos",
+    "defaultLoadProduct": "Contêineres Café & Algodão (TEU)"
+  }
+]
