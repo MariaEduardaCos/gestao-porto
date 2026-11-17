@@ -1,4 +1,4 @@
-package br.edu.unirv.lineup.ui.screens.lineup
+package br.edu.unirv.lineup.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

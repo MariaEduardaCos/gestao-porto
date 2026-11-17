@@ -1,5 +1,6 @@
-package br.edu.unirv.lineup.ui.screens.lineup
+package br.edu.unirv.lineup.ui.screens.port
 
+import br.edu.unirv.lineup.ui.components.*
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box

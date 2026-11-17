@@ -219,7 +219,7 @@ private fun StatusPill(
     }
     val pillText = when {
         isOnline -> "API Online (LineupBackend)"
-        isMock -> "Modo Local (Dados Mocados)"
+        isMock -> "Modo Local / Offline"
         else -> "Modo Local / Offline"
     }
 

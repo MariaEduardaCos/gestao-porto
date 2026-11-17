@@ -1,6 +1,8 @@
 package br.edu.unirv.lineup
 
 import br.edu.unirv.lineup.data.local.TideCsvParser
+import br.edu.unirv.lineup.data.local.SantosPortDefaultData
+import br.edu.unirv.lineup.data.model.ShipSchedule
 import br.edu.unirv.lineup.data.model.Berth
 import br.edu.unirv.lineup.data.model.CargoCategory
 import br.edu.unirv.lineup.data.model.CargoDirection
@@ -65,4 +67,20 @@ class PortSeedDataTest {
         assertEquals(59653L, cargo.durationDays(Int.MAX_VALUE))
         assertNull(cargo.copy(rateTonsPerDay = null, otherRate = "2800 mov/dia").durationDays(36000))
     }
+    @Test
+    fun keepsLegacyArrivalsInNovemberAndUsesTheSelectedMonthForNewArrivals() {
+        val arrival = ShipSchedule(shipName = "Navio de teste", startDay = 2.0, endDay = 4.0)
+        assertEquals(SantosPortDefaultData.INITIAL_MONTH, SantosPortDefaultData.monthOf(arrival))
+        val june = "Junho / 2026 (30 Dias)"
+        assertEquals(june, SantosPortDefaultData.monthOf(arrival.copy(tideMonthKey = june)))
+    }
+
+    @Test
+    fun allFifteenLocalCargoProfilesHavePositiveTonnageRates() {
+        val cargos = SantosPortDefaultData.cargos
+        assertEquals(15, cargos.size)
+        assertTrue(cargos.all { (it.rateTonsPerDay ?: 0) > 0 })
+        assertEquals(3, cargos.count { it.otherRate != null })
+    }
+
 }

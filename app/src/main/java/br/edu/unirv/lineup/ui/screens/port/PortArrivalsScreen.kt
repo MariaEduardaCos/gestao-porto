@@ -7,7 +7,7 @@ import androidx.compose.ui.graphics.Color
 import br.edu.unirv.lineup.data.model.Berth
 import br.edu.unirv.lineup.data.model.ShipSchedule
 import br.edu.unirv.lineup.ui.components.*
-import br.edu.unirv.lineup.ui.screens.lineup.ShipMooringDialog
+import br.edu.unirv.lineup.ui.components.ShipMooringDialog
 import br.edu.unirv.lineup.ui.viewmodel.MainViewModel
 
 @Composable
@@ -22,7 +22,7 @@ fun PortArrivalsScreen(vm: MainViewModel) {
                 ship.loadingProduct, ship.unloadingProduct, ship.status)
         }.sortedWith(compareBy<Pair<Berth, ShipSchedule>> { it.second.startDay }.thenBy { it.first.displayOrder })
 
-    PortList("Programação geral", query, { query = it }, "Buscar navio, berço, carga ou status",
+    PortList(vm.activeTideTable?.let { "Atracações de ${it.monthLabel}" } ?: "Programação geral", query, { query = it }, "Buscar navio, berço, carga ou status",
         rows, { it.second.id }, vm.isLoading, vm.errorMessage ?: vm.successMessage, {
             vm.clearMessages()
             editing = null

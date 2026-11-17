@@ -5,8 +5,22 @@ import br.edu.unirv.lineup.data.model.CargoCategory
 import br.edu.unirv.lineup.data.model.CargoDirection
 import br.edu.unirv.lineup.data.model.PortCargoCatalogItem
 import br.edu.unirv.lineup.data.model.TideTable
+import br.edu.unirv.lineup.data.model.ShipSchedule
 
 object SantosPortDefaultData {
+    const val INITIAL_MONTH = "Novembro / 2026 (30 Dias)"
+
+    fun monthOf(schedule: ShipSchedule): String = schedule.tideMonthKey ?: INITIAL_MONTH
+
+    // Pranchas nominais simuladas em massa para os perfis cuja origem usa outras unidades.
+    // As taxas originais são preservadas para consulta e não são convertidas em toneladas.
+    private val simulatedRates = mapOf("CRG-07" to 28_000, "CRG-12" to 2_700, "CRG-14" to 320)
+
+    fun withMockTonnageRate(cargo: PortCargoCatalogItem): PortCargoCatalogItem =
+        if (cargo.rateTonsPerDay == null && cargo.otherRate != null) {
+            cargo.copy(rateTonsPerDay = simulatedRates[cargo.code])
+        } else cargo
+
     val cargos = listOf(
         PortCargoCatalogItem("CRG-01", "Soja em Grãos (Exportação)", CargoCategory.SOLID_VEG, CargoDirection.LOAD, 36000),
         PortCargoCatalogItem("CRG-02", "Milho Granel Exportação", CargoCategory.SOLID_VEG, CargoDirection.LOAD, 34000),
@@ -23,7 +37,7 @@ object SantosPortDefaultData {
         PortCargoCatalogItem("CRG-13", "Carga de Projeto & Multicargas Geral", CargoCategory.MULTIPURPOSE, CargoDirection.BOTH, 8500),
         PortCargoCatalogItem("CRG-14", "Bagagem & Suprimento Cruzeiros (CONCAIS)", CargoCategory.PASSENGERS, CargoDirection.BOTH, null, "4.500 pax/dia"),
         PortCargoCatalogItem("CRG-15", "Tubos Flexíveis & Suprimento Offshore", CargoCategory.OFFSHORE, CargoDirection.BOTH, 6000)
-    )
+    ).map(::withMockTonnageRate)
 
     fun tides(context: Context): List<TideTable> = listOf(
         tide(context, 1, "Novembro", "novembro"),

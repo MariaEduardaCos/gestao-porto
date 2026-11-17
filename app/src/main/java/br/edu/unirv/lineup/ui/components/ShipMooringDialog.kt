@@ -1,4 +1,4 @@
-package br.edu.unirv.lineup.ui.screens.lineup
+package br.edu.unirv.lineup.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -12,7 +12,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
@@ -54,11 +53,6 @@ import br.edu.unirv.lineup.data.model.RegisteredVessel
 import br.edu.unirv.lineup.data.model.ShipSchedule
 import br.edu.unirv.lineup.ui.theme.DangerZoneRed
 import br.edu.unirv.lineup.data.model.PortCargoCatalogItem
-import br.edu.unirv.lineup.ui.components.ConfirmDeleteDialog
-import br.edu.unirv.lineup.ui.components.PortSelect
-import br.edu.unirv.lineup.ui.theme.HighTideGreen
-import br.edu.unirv.lineup.ui.theme.OperatingRed
-import br.edu.unirv.lineup.ui.theme.ScheduledOrange
 import kotlin.math.roundToInt
 
 @Composable
@@ -81,7 +75,8 @@ fun ShipMooringDialog(
     var loadingProduct by remember { mutableStateOf(initialSchedule?.loadingProduct ?: "Soja em Grãos") }
     var tonnageText by remember { mutableStateOf((initialSchedule?.tonnage ?: 55000).toString()) }
     var startDay by remember { mutableDoubleStateOf(initialSchedule?.startDay ?: 2.0) }
-    var cargoCode by remember { mutableStateOf<String?>(null) }
+    var cargoCode by remember { mutableStateOf(initialSchedule?.cargoCode) }
+    var manualEnd by remember { mutableStateOf(initialSchedule?.endDay?.toString()) }
     var confirmDelete by remember { mutableStateOf(false) }
     var status by remember { mutableStateOf(initialSchedule?.status ?: "Programado") }
 
@@ -97,7 +92,10 @@ fun ShipMooringDialog(
         ?: ratedCargos.firstOrNull { it.name.equals(loadingProduct, true) }
         ?: ratedCargos.firstOrNull { it.name.equals(unloadingProduct, true) }
     val duration = tonnage?.let { cargo?.durationDays(it) }
-    val endDay = duration?.let { startDay + it }
+    val intervalEnd = manualEnd
+    val endDay = if (intervalEnd == null) duration?.let { startDay + it }
+        else intervalEnd.replace(',', '.').toDoubleOrNull()?.takeIf { it.isFinite() }
+    val isCompleted = initialSchedule?.isCompleted == true
 
     // Validação reativa em tempo real (RN001 / RN002)
     val liveWarning = endDay?.let { validationWarning?.invoke(
@@ -190,7 +188,10 @@ fun ShipMooringDialog(
                         expanded = vesselDropdownExpanded,
                         onDismissRequest = { vesselDropdownExpanded = false }
                     ) {
-                        registeredVessels.take(30).forEach { v ->
+                        val matches = registeredVessels.filter {
+                            matchesPortSearch(shipName, it.shipName, it.imoCode, it.vesselClass)
+                        }
+                        (matches.ifEmpty { registeredVessels }).take(30).forEach { v ->
                             DropdownMenuItem(
                                 text = {
                                     Column {
@@ -201,6 +202,8 @@ fun ShipMooringDialog(
                                 onClick = {
                                     shipName = v.shipName
                                     tonnageText = v.defaultTonnage.toString()
+                                    cargoCode = null
+                                    manualEnd = null
                                     if (v.defaultUnloadProduct.isNotBlank()) unloadingProduct = v.defaultUnloadProduct
                                     if (v.defaultLoadProduct.isNotBlank()) loadingProduct = v.defaultLoadProduct
                                     vesselDropdownExpanded = false
@@ -233,7 +236,10 @@ fun ShipMooringDialog(
 
                 OutlinedTextField(
                     value = tonnageText,
-                    onValueChange = { tonnageText = it.filter { char -> char.isDigit() } },
+                    onValueChange = {
+                        tonnageText = it.filter { char -> char.isDigit() }
+                        if (cargo != null) manualEnd = null
+                    },
                     isError = tonnage == null,
                     supportingText = { if (tonnage == null) Text("Informe uma tonelagem positiva válida.") },
                     label = { Text("Volume (Toneladas)", fontSize = 11.sp) },
@@ -256,7 +262,7 @@ fun ShipMooringDialog(
                             Text("Janela de Atracação (Mês):", style = MaterialTheme.typography.labelSmall, fontWeight = FontWeight.Bold)
                             Text(
                                 text = if (endDay == null) "Selecione a prancha para calcular o término."
-                                    else "Dias %.1f a %.1f (%d dias)".format(startDay, endDay, duration),
+                                    else "Dias %.1f a %.1f (%.1f dias)".format(startDay, endDay, endDay - startDay),
                                 fontWeight = FontWeight.Bold,
                                 color = MaterialTheme.colorScheme.primary,
                                 fontSize = 12.sp
@@ -276,9 +282,24 @@ fun ShipMooringDialog(
                         PortSelect("Prancha", cargo, ratedCargos,
                             { it?.let { item -> "${item.name} · ${item.rateLabel}" } ?: "Selecione" }) {
                             cargoCode = it?.code
+                            manualEnd = null
                             if (initialSchedule == null && it != null) {
                                 if (it.direction == CargoDirection.UNLOAD) unloadingProduct = it.name
                                 else loadingProduct = it.name
+                            }
+                        }
+                        if (isEditing) {
+                            OutlinedTextField(
+                                value = manualEnd ?: endDay?.toString().orEmpty(),
+                                onValueChange = { manualEnd = it },
+                                label = { Text("Dia final") },
+                                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal),
+                                modifier = Modifier.fillMaxWidth(),
+                                singleLine = true,
+                                enabled = !isCompleted
+                            )
+                            TextButton(onClick = { manualEnd = null }, enabled = cargo != null && !isCompleted) {
+                                Text("Recalcular pela prancha")
                             }
                         }
                     }
@@ -286,55 +307,11 @@ fun ShipMooringDialog(
 
                 // Status Operacional (RN005)
                 Text("Status da Atracação (Cor Normatizada):", style = MaterialTheme.typography.labelSmall, fontWeight = FontWeight.Bold)
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(8.dp)
-                ) {
-                    listOf(
-                        Triple("Operando", OperatingRed, "#e74c3c"),
-                        Triple("Programado", ScheduledOrange, "#e67e22"),
-                        Triple("Confirmado", HighTideGreen, "#2ecc71")
-                    ).forEach { (label, color, hex) ->
-                        val isSelected = status.equals(label, ignoreCase = true)
-                        Surface(
-                            shape = RoundedCornerShape(6.dp),
-                            color = if (isSelected) color.copy(alpha = 0.25f) else MaterialTheme.colorScheme.surfaceVariant,
-                            modifier = Modifier
-                                .weight(1f)
-                                .border(
-                                    width = if (isSelected) 2.dp else 1.dp,
-                                    color = if (isSelected) color else Color.Transparent,
-                                    shape = RoundedCornerShape(6.dp)
-                                )
-                                .clickable { status = label }
-                                .padding(vertical = 8.dp),
-                            tonalElevation = if (isSelected) 2.dp else 0.dp
-                        ) {
-                            Row(
-                                modifier = Modifier.fillMaxWidth(),
-                                horizontalArrangement = Arrangement.Center,
-                                verticalAlignment = Alignment.CenterVertically
-                            ) {
-                                Box(
-                                    modifier = Modifier
-                                        .size(8.dp)
-                                        .background(color, CircleShape)
-                                        .padding(end = 4.dp)
-                                )
-                                Text(
-                                    text = label,
-                                    fontSize = 11.sp,
-                                    fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
-                                    color = if (isSelected) color else MaterialTheme.colorScheme.onSurface,
-                                    modifier = Modifier.padding(start = 4.dp)
-                                )
-                            }
-                        }
-                    }
-                }
+                PortSelect("Status", status, listOf("Operando", "Prioridade", "Programado", "Confirmado", "Concluído"),
+                    { it }) { status = it }
 
                 // Aviso de Validação (RN001 Anti-colisão / RN002 Maré Baixa)
-                val warning = liveWarning ?: saveError
+                val warning = if (isCompleted) "Atracação concluída · somente consulta." else liveWarning ?: saveError
                 if (warning != null) {
                     Surface(
                         shape = RoundedCornerShape(6.dp),
@@ -372,18 +349,19 @@ fun ShipMooringDialog(
                         startDay = startDay,
                         endDay = endDay ?: return@Button,
                         stripeColorHex = ShipSchedule.colorForStatus(status),
-                        status = status
+                        status = status,
+                        cargoCode = cargo?.code
                     )
                     onSave(selectedBerthId, schedule)
                 },
-                enabled = !busy && shipName.isNotBlank() && tonnage != null && endDay != null && liveWarning == null
+                enabled = !busy && !isCompleted && shipName.isNotBlank() && tonnage != null && endDay != null && liveWarning == null
             ) {
                 Text(if (isEditing) "Salvar Alterações" else "Confirmar Atracação")
             }
         },
         dismissButton = {
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                if (isEditing && onDelete != null) {
+                if (isEditing && !isCompleted && onDelete != null) {
                     TextButton(
                         onClick = { confirmDelete = true },
                         enabled = !busy,

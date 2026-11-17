@@ -43,7 +43,9 @@ object MockPortData {
                             startDay = sDto.startDay,
                             endDay = sDto.endDay,
                             stripeColorHex = if (sDto.stripeColorHex.isNotBlank()) sDto.stripeColorHex else ShipSchedule.colorForStatus(sDto.status),
-                            status = sDto.status
+                            status = sDto.status,
+                            tideMonthKey = sDto.tideMonthKey,
+                            cargoCode = sDto.cargoCode
                         )
                     }.toMutableList()
 
@@ -188,7 +190,7 @@ object MockPortData {
         val list = inMemoryBerths ?: return
         val idx = list.indexOfFirst { it.id == berth.id }
         if (idx >= 0) {
-            list[idx] = berth
+            list[idx] = berth.copy(schedules = list[idx].schedules)
         } else {
             list.add(berth)
         }
@@ -197,6 +199,9 @@ object MockPortData {
 
     fun deleteBerth(berthId: String): Boolean {
         val list = inMemoryBerths ?: return false
+        require(list.none { it.id == berthId && it.schedules.isNotEmpty() }) {
+            "Este berço possui atracações registradas. Reprograme ou remova as atracações antes de excluir o berço."
+        }
         return list.removeIf { it.id == berthId }
     }
 
@@ -263,6 +268,8 @@ object MockPortData {
         val startDay: Double,
         val endDay: Double,
         val stripeColorHex: String,
-        val status: String
+        val status: String,
+        val tideMonthKey: String?,
+        val cargoCode: String?
     )
 }

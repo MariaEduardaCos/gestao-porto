@@ -25,7 +25,7 @@ class PortRepository(
     private val cargoType = object : TypeToken<List<PortCargoCatalogItem>>() {}.type
     private val tideType = object : TypeToken<List<TideTable>>() {}.type
     private var localCargos: List<PortCargoCatalogItem>
-        get() = preferences.getString("cargos", null)?.let { gson.fromJson(it, cargoType) }
+        get() = preferences.getString("cargos", null)?.let { gson.fromJson<List<PortCargoCatalogItem>>(it, cargoType).map(SantosPortDefaultData::withMockTonnageRate) }
             ?: SantosPortDefaultData.cargos
         set(value) { preferences.edit().putString("cargos", gson.toJson(value)).apply() }
     private val localTides by lazy {
@@ -39,11 +39,21 @@ class PortRepository(
 
     suspend fun checkConnection(): Boolean = !config.isMockMode && apiClient.checkConnection()
 
+    private val activeMonthKey: String?
+        get() = localTides.firstOrNull { it.activeMonth }?.monthKey
+
+    private fun ShipSchedule.belongsToMonth(monthKey: String?) =
+        SantosPortDefaultData.monthOf(this) == monthKey
+
     suspend fun getBerths(): List<Berth> = read(
         remote = apiClient::fetchAllBerths,
-        local = { MockPortData.getBerths(context).map { berth ->
-            berth.copy(schedules = berth.schedules.map { it.copy() }.toMutableList())
-        } }
+        local = {
+            val month = activeMonthKey
+            MockPortData.getBerths(context).map { berth ->
+                berth.copy(schedules = berth.schedules.filter { it.belongsToMonth(month) }
+                    .map { it.copy() }.toMutableList())
+            }
+        }
     )
 
     suspend fun getTideTables(): List<TideTable> = read(apiClient::fetchTideTables) { localTides.toList() }
@@ -77,6 +87,12 @@ class PortRepository(
 
     suspend fun saveTide(table: TideTable, csv: String) = withContext(Dispatchers.IO) {
         if (config.isMockMode) {
+            require(MockPortData.getBerths(context).none { berth ->
+                berth.schedules.any {
+                    it.belongsToMonth(table.monthKey) &&
+                        table.findFirstLowTideDayInRange(it.startDay, it.endDay) != null
+                }
+            }) { "A nova tábua bloqueia dias com atracações registradas neste mês." }
             val index = localTides.indexOfFirst { it.id == table.id }
             if (index >= 0) localTides[index] = table
             else localTides.add(table.copy(id = (localTides.maxOfOrNull { it.id } ?: 0) + 1))
@@ -88,6 +104,10 @@ class PortRepository(
 
     suspend fun deleteTide(id: Long) = withContext(Dispatchers.IO) {
         check(config.isMockMode) { "O servidor não oferece exclusão de tábuas de marés." }
+        val month = localTides.first { it.id == id }.monthKey
+        require(MockPortData.getBerths(context).none { berth ->
+            berth.schedules.any { it.belongsToMonth(month) }
+        }) { "Esta tábua possui atracações registradas. Preserve a tábua enquanto houver registros nesse mês." }
         localTides.removeAll { it.id == id }
         if (localTides.none { it.activeMonth } && localTides.isNotEmpty()) {
             localTides[0] = localTides[0].copy(activeMonth = true)
@@ -123,7 +143,8 @@ class PortRepository(
 
     suspend fun addOrUpdateShip(berthId: String, schedule: ShipSchedule) = withContext(Dispatchers.IO) {
         if (config.isMockMode) {
-            MockPortData.addOrUpdateShip(berthId, schedule)
+            val month = requireNotNull(activeMonthKey) { "Selecione uma tábua de marés antes de atracar." }
+            MockPortData.addOrUpdateShip(berthId, schedule.copy(tideMonthKey = month))
             MockPortData.persist(context)
         }
         else if (schedule.id <= 0) apiClient.createShipSchedule(berthId, schedule)

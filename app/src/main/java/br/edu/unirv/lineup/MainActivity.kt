@@ -40,7 +40,6 @@ import br.edu.unirv.lineup.ui.navigation.AppDrawer
 import br.edu.unirv.lineup.ui.navigation.Screen
 import br.edu.unirv.lineup.ui.screens.PlaceholderScreen
 import br.edu.unirv.lineup.ui.screens.port.*
-import br.edu.unirv.lineup.ui.screens.lineup.LineupScreen
 import br.edu.unirv.lineup.ui.screens.settings.SettingsScreen
 import br.edu.unirv.lineup.ui.theme.HighTideGreen
 import br.edu.unirv.lineup.ui.theme.LineupTheme
@@ -163,7 +162,7 @@ private fun TopBarStatusBadge(
     }
     val label = when {
         isOnline -> "Online"
-        isMock -> "Mocado"
+        isMock -> "Modo Local / Offline"
         else -> "Offline"
     }
 

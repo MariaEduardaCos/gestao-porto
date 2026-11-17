@@ -20,7 +20,7 @@ import androidx.compose.ui.Modifier
 import br.edu.unirv.lineup.data.model.TideMeasurement
 import br.edu.unirv.lineup.data.model.TideTable
 import br.edu.unirv.lineup.ui.components.*
-import br.edu.unirv.lineup.ui.screens.lineup.TideSelector
+import br.edu.unirv.lineup.ui.components.TideSelector
 import br.edu.unirv.lineup.ui.theme.DangerZoneRed
 import br.edu.unirv.lineup.ui.theme.HighTideGreen
 import br.edu.unirv.lineup.ui.viewmodel.MainViewModel

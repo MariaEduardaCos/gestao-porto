@@ -339,6 +339,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     fun addOrUpdateShip(berthId: String, schedule: ShipSchedule, onSuccess: () -> Unit) {
         if (isLoading || isSavingSchedule) return
+        if (protectCompletedSchedule(schedule.id)) return
         val validationError = validateMooring(berthId, schedule.startDay, schedule.endDay, if (schedule.id > 0) schedule.id else null)
         if (validationError != null) {
             errorMessage = validationError
@@ -366,7 +367,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         newEnd: Double,
         targetBerthId: String? = null
     ): Boolean {
-        if (isLoading || isSavingSchedule) return false
+        if (isLoading || isSavingSchedule || protectCompletedSchedule(scheduleId)) return false
         // Encontra o berço atual
         val currentBerth = allBerths.firstOrNull { b -> b.schedules.any { it.id == scheduleId } }
             ?: return false
@@ -395,7 +396,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     fun deleteShip(scheduleId: Long, onSuccess: () -> Unit) {
-        if (isLoading || isSavingSchedule) return
+        if (isLoading || isSavingSchedule || protectCompletedSchedule(scheduleId)) return
         viewModelScope.launch {
             isLoading = true
             try {
@@ -409,6 +410,12 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 isLoading = false
             }
         }
+    }
+
+    private fun protectCompletedSchedule(scheduleId: Long): Boolean {
+        val completed = allBerths.any { berth -> berth.schedules.any { it.id == scheduleId && it.isCompleted } }
+        if (completed) errorMessage = "Atracações concluídas são preservadas no histórico."
+        return completed
     }
 
     // Configurações do Servidor REST (RF002)

@@ -9,8 +9,11 @@ data class ShipSchedule(
     var startDay: Double,
     var endDay: Double,
     var stripeColorHex: String = "#e67e22",
-    var status: String = "Programado"
+    var status: String = "Programado",
+    val tideMonthKey: String? = null,
+    val cargoCode: String? = null
 ) {
+    val isCompleted: Boolean get() = status.equals("Concluído", true)
     val durationDays: Double get() = endDay - startDay
 
     companion object {
