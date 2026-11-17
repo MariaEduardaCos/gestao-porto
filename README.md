@@ -1,30 +1,29 @@
-# Lineup de Navios — Primeira Entrega
+# Módulo de Lineup de Navios
 
-Aplicativo Android em Kotlin e Jetpack Compose para o Gêmeo Digital do Porto de Santos. Uma instalação nova abre diretamente no Lineup, com **Modo Local** ativo. Os dados da demonstração vêm com o aplicativo e podem ser usados sem servidor, banco de dados ou internet.
+Projeto Android em Kotlin, Jetpack Compose e Material 3. Uma instalação nova abre o Lineup com o modo local ativado. Os dados acompanham o aplicativo e podem ser usados sem servidor.
 
-## Como abrir
+## Executar pelo Android Studio
 
-- **APK** — instale `apk/LineupApp-debug.apk` em um dispositivo ou emulador Android 8.0 (API 26) ou superior. Com um dispositivo conectado, também é possível usar `adb install -r apk/LineupApp-debug.apk`.
-- **Projeto** — extraia o ZIP e abra a pasta `LineupApp` no Android Studio. Configure o Gradle para usar o JDK 17, instale o Android SDK 34 e sincronize o projeto. Selecione um dispositivo e clique em **Run**. A primeira sincronização pode baixar dependências.
+1. Extraia o ZIP e abra a pasta `LineupNavios` no Android Studio.
+2. Configure o Gradle para usar o JDK 17 e instale o Android SDK 34. Sincronize o projeto. A primeira sincronização pode baixar dependências.
+3. Selecione um emulador ou dispositivo com Android 9 (API 28) ou superior e clique em **Run**.
 
-## O que demonstrar
+## Demonstrar o módulo
 
-- **RF003** — 60 berços em 12 páginas de 5, 153 atracações iniciais, busca por berço, navio ou carga, filtros pelas 11 categorias, indicadores e seletor de tábua de marés. O gráfico apresenta 30 dias, curva de maré e faixas sombreadas nos dias críticos. Use **+ Novo Berço** para cadastrar um berço local.
-- **RF004** — use **Atracar Navio** para criar uma programação ou toque no casco para editar ou excluir. Deslize em uma área livre para navegar no calendário. Arraste o centro do casco para deslocar a janela ou suas extremidades para ajustar o início e o fim.
-- **RN001, RN002 e RN005** — a edição e os gestos validam colisões e dias de maré baixa. As cores identificam os status de operação ou prioridade, programação e confirmação.
+- Abra o grupo **PORTOS** no menu lateral para acessar Lineup, Berços, Cargas, Navios, Tábuas de Marés e Atracações.
+- Novembro começa com 60 berços, 152 embarcações no catálogo e 153 atracações. Junho e setembro têm tábuas próprias e começam sem atracações. Ao retornar a um mês, sua programação reaparece. O gráfico, os indicadores e a lista usam o mês ativo.
+- Toque no casco para consultar ou editar, arraste pelo centro para mover a janela ou use as extremidades para redimensionar. As janelas são validadas contra sobreposição e maré baixa. Atracações concluídas permanecem disponíveis para consulta.
+- O cadastro calcula o término por `ceil(tonelagem / prancha)`. Na edição, é possível ajustar o dia final ou recalculá-lo pela prancha. O catálogo inclui 15 cargas. As taxas em t/dia de contêineres, veículos e cruzeiros são parâmetros simulados para a demonstração.
+- As tábuas usam CSVs com 48 leituras por dia. O gráfico usa as alturas medidas, e a tela de tábuas mostra a mínima, a máxima e o status de cada dia.
 
-As alterações de demonstração ficam em memória durante a execução. Ao encerrar o processo do aplicativo, a próxima abertura carrega novamente os dados iniciais.
+As alterações locais são guardadas no dispositivo. Para voltar aos dados iniciais, limpe os dados do aplicativo nas configurações do Android.
 
-## Configuração do backend
+## Testar e compilar
 
-O menu **Configurações** permite informar a URL do backend fornecido pelo professor. Para um servidor na máquina que roda o emulador, use `http://10.0.2.2:8080`. Em um dispositivo físico, aponte para o endereço da máquina na mesma rede. Desative **Modo Dados Mocados** e use **Testar Conexão REST** com o servidor em execução.
-
-Esta etapa cobre o Lineup com dados locais. O enunciado geral também prevê os demais módulos e a integração completa com o servidor para a entrega final.
-
-## Testes e compilação
-
-Na pasta `LineupApp`, com JDK 17 e Android SDK 34 configurados:
+Com JDK 17 e Android SDK 34 configurados, execute na pasta do projeto:
 
 ```sh
 ./gradlew :app:testDebugUnitTest :app:assembleDebug
 ```
+
+O APK de debug é gerado em `app/build/outputs/apk/debug/app-debug.apk`.
