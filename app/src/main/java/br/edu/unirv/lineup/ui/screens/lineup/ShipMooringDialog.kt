@@ -49,9 +49,13 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.edu.unirv.lineup.data.model.Berth
+import br.edu.unirv.lineup.data.model.CargoDirection
 import br.edu.unirv.lineup.data.model.RegisteredVessel
 import br.edu.unirv.lineup.data.model.ShipSchedule
 import br.edu.unirv.lineup.ui.theme.DangerZoneRed
+import br.edu.unirv.lineup.data.model.PortCargoCatalogItem
+import br.edu.unirv.lineup.ui.components.ConfirmDeleteDialog
+import br.edu.unirv.lineup.ui.components.PortSelect
 import br.edu.unirv.lineup.ui.theme.HighTideGreen
 import br.edu.unirv.lineup.ui.theme.OperatingRed
 import br.edu.unirv.lineup.ui.theme.ScheduledOrange
@@ -63,10 +67,13 @@ fun ShipMooringDialog(
     initialSchedule: ShipSchedule?,
     allBerths: List<Berth>,
     registeredVessels: List<RegisteredVessel>,
+    cargos: List<PortCargoCatalogItem>,
     onDismiss: () -> Unit,
     onSave: (berthId: String, schedule: ShipSchedule) -> Unit,
     onDelete: ((scheduleId: Long) -> Unit)? = null,
-    validationWarning: ((berthId: String, startDay: Double, endDay: Double, ignoreId: Long?) -> String?)? = null
+    validationWarning: ((berthId: String, startDay: Double, endDay: Double, ignoreId: Long?) -> String?)? = null,
+    saveError: String? = null,
+    busy: Boolean = false
 ) {
     var selectedBerthId by remember { mutableStateOf(initialBerthId) }
     var shipName by remember { mutableStateOf(initialSchedule?.shipName ?: "") }
@@ -74,7 +81,8 @@ fun ShipMooringDialog(
     var loadingProduct by remember { mutableStateOf(initialSchedule?.loadingProduct ?: "Soja em Grãos") }
     var tonnageText by remember { mutableStateOf((initialSchedule?.tonnage ?: 55000).toString()) }
     var startDay by remember { mutableDoubleStateOf(initialSchedule?.startDay ?: 2.0) }
-    var endDay by remember { mutableDoubleStateOf(initialSchedule?.endDay ?: 6.0) }
+    var cargoCode by remember { mutableStateOf<String?>(null) }
+    var confirmDelete by remember { mutableStateOf(false) }
     var status by remember { mutableStateOf(initialSchedule?.status ?: "Programado") }
 
     var berthDropdownExpanded by remember { mutableStateOf(false) }
@@ -84,16 +92,23 @@ fun ShipMooringDialog(
     val isEditing = initialSchedule != null && initialSchedule.id > 0
     val selectedBerth = allBerths.firstOrNull { it.id == selectedBerthId } ?: allBerths.firstOrNull()
 
+    val ratedCargos = cargos.filter { it.rateTonsPerDay != null }
+    val cargo = ratedCargos.firstOrNull { it.code == cargoCode }
+        ?: ratedCargos.firstOrNull { it.name.equals(loadingProduct, true) }
+        ?: ratedCargos.firstOrNull { it.name.equals(unloadingProduct, true) }
+    val duration = tonnage?.let { cargo?.durationDays(it) }
+    val endDay = duration?.let { startDay + it }
+
     // Validação reativa em tempo real (RN001 / RN002)
-    val liveWarning = validationWarning?.invoke(
+    val liveWarning = endDay?.let { validationWarning?.invoke(
         selectedBerthId,
         startDay,
         endDay,
-        if (isEditing) initialSchedule?.id else null
-    )
+        initialSchedule?.id
+    ) }
 
     AlertDialog(
-        onDismissRequest = onDismiss,
+        onDismissRequest = { if (!busy) onDismiss() },
         title = {
             Row(
                 verticalAlignment = Alignment.CenterVertically,
@@ -240,7 +255,8 @@ fun ShipMooringDialog(
                         ) {
                             Text("Janela de Atracação (Mês):", style = MaterialTheme.typography.labelSmall, fontWeight = FontWeight.Bold)
                             Text(
-                                text = "Dias %.1f a %.1f (%.1f dias)".format(startDay, endDay, endDay - startDay),
+                                text = if (endDay == null) "Selecione a prancha para calcular o término."
+                                    else "Dias %.1f a %.1f (%d dias)".format(startDay, endDay, duration),
                                 fontWeight = FontWeight.Bold,
                                 color = MaterialTheme.colorScheme.primary,
                                 fontSize = 12.sp
@@ -252,22 +268,19 @@ fun ShipMooringDialog(
                             value = startDay.toFloat(),
                             onValueChange = { newStart ->
                                 startDay = (newStart * 2).roundToInt() / 2.0 // Passos de meio dia
-                                if (endDay <= startDay) endDay = (startDay + 1.0).coerceAtMost(30.0)
                             },
                             valueRange = 1.0f..29.0f,
                             steps = 55
                         )
 
-                        Text("Dia de Término (Desatracação): %.1f".format(endDay), fontSize = 11.sp)
-                        Slider(
-                            value = endDay.toFloat(),
-                            onValueChange = { newEnd ->
-                                val candidate = (newEnd * 2).roundToInt() / 2.0
-                                if (candidate > startDay) endDay = candidate.coerceAtMost(30.0)
-                            },
-                            valueRange = 2.0f..30.0f,
-                            steps = 55
-                        )
+                        PortSelect("Prancha", cargo, ratedCargos,
+                            { it?.let { item -> "${item.name} · ${item.rateLabel}" } ?: "Selecione" }) {
+                            cargoCode = it?.code
+                            if (initialSchedule == null && it != null) {
+                                if (it.direction == CargoDirection.UNLOAD) unloadingProduct = it.name
+                                else loadingProduct = it.name
+                            }
+                        }
                     }
                 }
 
@@ -321,7 +334,8 @@ fun ShipMooringDialog(
                 }
 
                 // Aviso de Validação (RN001 Anti-colisão / RN002 Maré Baixa)
-                if (liveWarning != null) {
+                val warning = liveWarning ?: saveError
+                if (warning != null) {
                     Surface(
                         shape = RoundedCornerShape(6.dp),
                         color = DangerZoneRed.copy(alpha = 0.15f),
@@ -335,7 +349,7 @@ fun ShipMooringDialog(
                         ) {
                             Icon(Icons.Default.Warning, contentDescription = null, tint = DangerZoneRed, modifier = Modifier.size(16.dp))
                             Text(
-                                text = liveWarning,
+                                text = warning,
                                 color = DangerZoneRed,
                                 fontSize = 11.sp,
                                 fontWeight = FontWeight.SemiBold
@@ -356,13 +370,13 @@ fun ShipMooringDialog(
                         loadingProduct = loadingProduct.trim(),
                         tonnage = ton,
                         startDay = startDay,
-                        endDay = endDay,
+                        endDay = endDay ?: return@Button,
                         stripeColorHex = ShipSchedule.colorForStatus(status),
                         status = status
                     )
                     onSave(selectedBerthId, schedule)
                 },
-                enabled = shipName.isNotBlank() && tonnage != null && endDay > startDay && liveWarning == null
+                enabled = !busy && shipName.isNotBlank() && tonnage != null && endDay != null && liveWarning == null
             ) {
                 Text(if (isEditing) "Salvar Alterações" else "Confirmar Atracação")
             }
@@ -371,17 +385,24 @@ fun ShipMooringDialog(
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 if (isEditing && onDelete != null) {
                     TextButton(
-                        onClick = { onDelete(initialSchedule.id) },
+                        onClick = { confirmDelete = true },
+                        enabled = !busy,
                         colors = ButtonDefaults.textButtonColors(contentColor = DangerZoneRed)
                     ) {
                         Icon(Icons.Default.Delete, contentDescription = null, modifier = Modifier.size(16.dp))
                         Text("Excluir", modifier = Modifier.padding(start = 4.dp))
                     }
                 }
-                OutlinedButton(onClick = onDismiss) {
+                OutlinedButton(onClick = onDismiss, enabled = !busy) {
                     Text("Cancelar")
                 }
             }
         }
     )
+    if (confirmDelete && initialSchedule != null && onDelete != null) {
+        ConfirmDeleteDialog(initialSchedule.shipName, busy, { confirmDelete = false }) {
+            confirmDelete = false
+            onDelete(initialSchedule.id)
+        }
+    }
 }

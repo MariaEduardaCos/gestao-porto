@@ -49,9 +49,7 @@ import br.edu.unirv.lineup.data.model.TideTable
 import br.edu.unirv.lineup.ui.theme.DangerZoneRed
 import br.edu.unirv.lineup.ui.theme.HighTideGreen
 import br.edu.unirv.lineup.ui.theme.OceanPrimary
-import kotlin.math.PI
 import kotlin.math.roundToInt
-import kotlin.math.sin
 
 private enum class DragMode { MOVE, RESIZE_START, RESIZE_END }
 
@@ -394,16 +392,16 @@ fun BerthTimelineCanvas(
                 )
             }
 
-            // 3. Curva senoidal da maré (linha d'água), desenhada sobre a base dos cascos
+            // Curva de maré com uma amostra por intervalo de 30 minutos.
             val tidePath = Path()
-            val amplitude = 2.2f * dp1
-            val step = 3 * dp1
-            var px = 0f
-            while (px <= totalWidthPx) {
-                val dayFrac = px / dayWidthPx
-                val py = waterY + (sin(dayFrac * PI * 1.6) * amplitude).toFloat()
-                if (px == 0f) tidePath.moveTo(px, py) else tidePath.lineTo(px, py)
-                px += step
+            val readings = activeTide?.measurements.orEmpty()
+            val minimum = readings.minOfOrNull { it.heightMeters } ?: 0.0
+            val span = ((readings.maxOfOrNull { it.heightMeters } ?: minimum) - minimum)
+                .takeIf { it > 0 } ?: 1.0
+            readings.forEachIndexed { index, reading ->
+                val px = (reading.fractionalDay - 1.0).toFloat() * dayWidthPx
+                val py = waterY + (2.0 - 4.0 * (reading.heightMeters - minimum) / span).toFloat() * dp1
+                if (index == 0) tidePath.moveTo(px, py) else tidePath.lineTo(px, py)
             }
             drawPath(
                 path = tidePath,

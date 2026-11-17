@@ -5,7 +5,6 @@ import br.edu.unirv.lineup.data.model.Berth
 import br.edu.unirv.lineup.data.model.CargoCategory
 import br.edu.unirv.lineup.data.model.RegisteredVessel
 import br.edu.unirv.lineup.data.model.ShipSchedule
-import br.edu.unirv.lineup.data.model.TideTable
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
@@ -14,53 +13,7 @@ object MockPortData {
     private val gson = Gson()
     private var inMemoryBerths: MutableList<Berth>? = null
     private var inMemoryVessels: MutableList<RegisteredVessel>? = null
-    private var inMemoryTides: MutableList<TideTable>? = null
     private var nextScheduleId: Long = 1000L
-
-    fun getTideTables(): List<TideTable> {
-        if (inMemoryTides == null) {
-            inMemoryTides = mutableListOf(
-                TideTable(
-                    id = 1L,
-                    monthKey = "Novembro / 2026 (30 Dias)",
-                    monthLabel = "Novembro / 2026",
-                    sourceFileName = "/tides/mare_novembro_2026.csv",
-                    activeMonth = true,
-                    totalMeasurements = 1440,
-                    lowTideDays = setOf(11, 12, 15, 16, 23, 24, 30)
-                ),
-                TideTable(
-                    id = 2L,
-                    monthKey = "Setembro / 2026 (30 Dias)",
-                    monthLabel = "Setembro / 2026",
-                    sourceFileName = "/tides/mare_setembro_2026.csv",
-                    activeMonth = false,
-                    totalMeasurements = 1440,
-                    lowTideDays = setOf(5, 6, 13, 14, 21, 22, 29)
-                ),
-                TideTable(
-                    id = 3L,
-                    monthKey = "Junho / 2026 (30 Dias)",
-                    monthLabel = "Junho / 2026",
-                    sourceFileName = "/tides/mare_junho_2026.csv",
-                    activeMonth = false,
-                    totalMeasurements = 1440,
-                    lowTideDays = setOf(4, 5, 12, 13, 19, 20, 27, 28)
-                )
-            )
-        }
-        return inMemoryTides!!
-    }
-
-    fun getActiveTideTable(): TideTable {
-        return getTideTables().firstOrNull { it.activeMonth } ?: getTideTables().first()
-    }
-
-    fun setActiveTideTable(id: Long) {
-        val list = inMemoryTides ?: getTideTables().toMutableList()
-        list.forEach { it.activeMonth = (it.id == id) }
-        inMemoryTides = list
-    }
 
     fun getBerths(context: Context? = null): List<Berth> {
         if (inMemoryBerths != null) {
@@ -69,7 +22,8 @@ object MockPortData {
 
         if (context != null) {
             try {
-                val jsonString = context.assets.open("berths.json").bufferedReader().use { it.readText() }
+                val jsonString = savedJson(context, "berths")
+                    ?: context.assets.open("berths.json").bufferedReader().use { it.readText() }
                 val type = object : TypeToken<List<BerthJsonDto>>() {}.type
                 val dtoList: List<BerthJsonDto> = gson.fromJson(jsonString, type)
 
@@ -104,6 +58,7 @@ object MockPortData {
                     )
                 }.toMutableList()
 
+                nextScheduleId = maxOf(1000L, (berths.flatMap { it.schedules }.maxOfOrNull { it.id } ?: 0L) + 1)
                 inMemoryBerths = berths
                 return berths
             } catch (e: Exception) {
@@ -121,7 +76,8 @@ object MockPortData {
         if (inMemoryVessels != null) return inMemoryVessels!!
         if (context != null) {
             try {
-                val jsonString = context.assets.open("vessels.json").bufferedReader().use { it.readText() }
+                val jsonString = savedJson(context, "vessels")
+                    ?: context.assets.open("vessels.json").bufferedReader().use { it.readText() }
                 val type = object : TypeToken<List<RegisteredVessel>>() {}.type
                 val list: List<RegisteredVessel> = gson.fromJson(jsonString, type)
                 inMemoryVessels = list.toMutableList()
@@ -131,6 +87,28 @@ object MockPortData {
             }
         }
         return emptyList()
+    }
+
+    fun saveVessel(context: Context, vessel: RegisteredVessel) {
+        getVessels(context)
+        val vessels = checkNotNull(inMemoryVessels)
+        val index = vessels.indexOfFirst { it.imoCode == vessel.imoCode }
+        if (index < 0) {
+            vessels.add(vessel)
+        } else {
+            val oldName = vessels[index].shipName
+            vessels[index] = vessel
+            // Legacy schedules identify their vessel by name.
+            if (vessels.none { it.imoCode != vessel.imoCode && it.shipName.equals(oldName, true) }) {
+                getBerths(context).flatMap { it.schedules }.filter { it.shipName.equals(oldName, true) }
+                    .forEach { it.shipName = vessel.shipName }
+            }
+        }
+    }
+
+    fun deleteVessel(context: Context, imo: String) {
+        getVessels(context)
+        checkNotNull(inMemoryVessels).removeAll { it.imoCode == imo }
     }
 
     fun addOrUpdateShip(berthId: String, schedule: ShipSchedule): Berth {
@@ -221,6 +199,16 @@ object MockPortData {
         val list = inMemoryBerths ?: return false
         return list.removeIf { it.id == berthId }
     }
+
+    fun persist(context: Context) {
+        val editor = context.getSharedPreferences("port_mock_data", Context.MODE_PRIVATE).edit()
+        inMemoryBerths?.let { editor.putString("berths", gson.toJson(it)) }
+        inMemoryVessels?.let { editor.putString("vessels", gson.toJson(it)) }
+        editor.apply()
+    }
+
+    private fun savedJson(context: Context, key: String): String? =
+        context.getSharedPreferences("port_mock_data", Context.MODE_PRIVATE).getString(key, null)
 
     private fun generateFallbackBerths(): MutableList<Berth> {
         val list = mutableListOf<Berth>()

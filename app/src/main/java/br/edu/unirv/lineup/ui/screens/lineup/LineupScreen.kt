@@ -269,6 +269,9 @@ fun LineupScreen(
                 initialSchedule = selectedScheduleToEdit,
                 allBerths = viewModel.allBerths,
                 registeredVessels = viewModel.vessels,
+                cargos = viewModel.cargos,
+                busy = viewModel.isLoading,
+                saveError = viewModel.errorMessage,
                 onDismiss = { showMooringDialog = false },
                 onSave = { berthId, schedule ->
                     viewModel.addOrUpdateShip(berthId, schedule) {

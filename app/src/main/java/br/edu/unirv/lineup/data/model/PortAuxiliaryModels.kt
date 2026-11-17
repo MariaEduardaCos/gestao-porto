@@ -10,9 +10,22 @@ data class RegisteredVessel(
     val defaultLoadProduct: String
 )
 
-data class PortCargo(
-    val productCode: String,
+enum class CargoDirection(val label: String) {
+    LOAD("Carga"),
+    UNLOAD("Descarga"),
+    BOTH("Descarga e carga")
+}
+
+data class PortCargoCatalogItem(
+    val code: String,
     val name: String,
     val category: CargoCategory,
-    val unit: String = "t"
-)
+    val direction: CargoDirection,
+    val rateTonsPerDay: Int?,
+    val otherRate: String? = null
+) {
+    val rateLabel: String get() = rateTonsPerDay?.let { "$it t/dia" } ?: otherRate.orEmpty()
+
+    fun durationDays(tonnage: Int): Long? =
+        rateTonsPerDay?.takeIf { it > 0 }?.let { (tonnage.toLong() + it - 1) / it }
+}

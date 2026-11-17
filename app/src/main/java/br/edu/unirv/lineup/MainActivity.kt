@@ -39,6 +39,7 @@ import androidx.compose.ui.unit.sp
 import br.edu.unirv.lineup.ui.navigation.AppDrawer
 import br.edu.unirv.lineup.ui.navigation.Screen
 import br.edu.unirv.lineup.ui.screens.PlaceholderScreen
+import br.edu.unirv.lineup.ui.screens.port.*
 import br.edu.unirv.lineup.ui.screens.lineup.LineupScreen
 import br.edu.unirv.lineup.ui.screens.settings.SettingsScreen
 import br.edu.unirv.lineup.ui.theme.HighTideGreen
@@ -131,6 +132,11 @@ class MainActivity : ComponentActivity() {
                             when (viewModel.currentScreen) {
                                 is Screen.Lineup -> LineupScreen(viewModel = viewModel)
                                 is Screen.Settings -> SettingsScreen(viewModel = viewModel)
+                                Screen.PortBerths -> PortBerthsScreen(viewModel)
+                                Screen.PortCargos -> PortCargosScreen(viewModel)
+                                Screen.PortVessels -> PortShipsScreen(viewModel)
+                                Screen.PortTides -> PortTidesScreen(viewModel)
+                                Screen.PortArrivals -> PortArrivalsScreen(viewModel)
                                 else -> PlaceholderScreen(
                                     screen = viewModel.currentScreen,
                                     onBackToLineup = { viewModel.currentScreen = Screen.Lineup }

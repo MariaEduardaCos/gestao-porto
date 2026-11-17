@@ -2,13 +2,14 @@ package br.edu.unirv.lineup.ui.viewmodel
 
 import android.app.Application
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableDoubleStateOf
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
+import br.edu.unirv.lineup.data.local.TideCsvParser
+import br.edu.unirv.lineup.data.model.PortCargoCatalogItem
 import br.edu.unirv.lineup.data.model.Berth
 import br.edu.unirv.lineup.data.model.CargoCategory
 import br.edu.unirv.lineup.data.model.LineupKpiMetrics
@@ -45,7 +46,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     private var isSavingSchedule = false
     var tideTables = mutableStateListOf<TideTable>()
     var activeTideTable by mutableStateOf<TideTable?>(null)
-    var vessels = mutableStateListOf<RegisteredVessel>()
+    var vessels by mutableStateOf<List<RegisteredVessel>>(emptyList())
+        private set
+    var cargos by mutableStateOf<List<PortCargoCatalogItem>>(emptyList())
+        private set
 
     // Filtros e Paginação (RF003)
     var selectedCategories = mutableStateListOf<CargoCategory>()
@@ -58,6 +62,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     fun loadAllData() {
+        if (isLoading || isSavingSchedule) return
         viewModelScope.launch {
             isLoading = true
             errorMessage = null
@@ -67,15 +72,9 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 isMockMode = config.isMockMode
 
                 // Carrega tábuas de marés
-                val tides = repository.getTideTables()
-                tideTables.clear()
-                tideTables.addAll(tides)
-                activeTideTable = tides.firstOrNull { it.activeMonth } ?: tides.firstOrNull()
-
-                // Carrega catálogo de navios
-                val vList = repository.getVessels()
-                vessels.clear()
-                vessels.addAll(vList)
+                refreshTides()
+                vessels = repository.getVessels()
+                cargos = repository.getCargos()
 
                 // Carrega berços e suas programações
                 refreshBerths()
@@ -184,12 +183,91 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         if (currentPage > 1) currentPage--
     }
 
-    fun switchTideTable(tideId: Long) {
+    private suspend fun refreshTides() {
+        val levels = repository.getTideTables()
+        tideTables.clear()
+        tideTables.addAll(levels)
+        activeTideTable = levels.firstOrNull { it.activeMonth } ?: levels.firstOrNull()
+    }
+
+    fun switchTideTable(tideId: Long) = changePortData("Tábua de marés alterada.") {
+        repository.setActiveTide(tideId)
+        refreshTides()
+        refreshBerths()
+    }
+
+    fun saveTide(label: String, fileName: String, csv: String, existing: TideTable?, onSaved: () -> Unit) =
+        changePortData("Tábua de marés salva.", onSaved) {
+            val key = existing?.monthKey ?: "$label (30 Dias)"
+            require(existing != null || tideTables.none { it.monthKey.equals(key, true) }) { "Esse mês já está cadastrado." }
+            val readings = kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.Default) { TideCsvParser.parse(csv) }
+            val table = TideTable(existing?.id ?: 0, key, label, fileName,
+                existing?.activeMonth ?: tideTables.isEmpty()).withMeasurements(readings)
+            repository.saveTide(table, csv)
+            refreshTides()
+            refreshBerths()
+        }
+
+    fun deleteTide(id: Long, done: () -> Unit) = changePortData("Tábua de marés excluída.", done) {
+        repository.deleteTide(id)
+        refreshTides()
+    }
+
+    fun saveBerth(berth: Berth, editing: Boolean, done: () -> Unit) = changePortData("Berço salvo.", done) {
+        require(editing || allBerths.none { it.id.equals(berth.id, true) }) { "Código de berço já cadastrado." }
+        val order = if (editing) berth.displayOrder else (allBerths.maxOfOrNull { it.displayOrder } ?: 0) + 1
+        repository.addOrUpdateBerth(berth.copy(displayOrder = order), editing)
+        refreshBerths()
+    }
+
+    fun deleteBerth(id: String, done: () -> Unit) = changePortData("Berço excluído.", done) {
+        require(allBerths.first { it.id == id }.schedules.isEmpty()) { "Remova ou reprograme as atracações desse berço primeiro." }
+        repository.deleteBerth(id)
+        refreshBerths()
+    }
+
+    fun saveVessel(vessel: RegisteredVessel, editing: Boolean, done: () -> Unit) =
+        changePortData("Navio salvo.", done) {
+            require(Regex("IMO-[0-9]{7}").matches(vessel.imoCode)) { "Informe o código no formato IMO-xxxxxxx." }
+            require(editing || vessels.none { it.imoCode.equals(vessel.imoCode, true) }) { "IMO já cadastrado." }
+            repository.saveVessel(vessel, editing)
+            vessels = repository.getVessels()
+            refreshBerths()
+        }
+
+    fun deleteVessel(imo: String, done: () -> Unit) = changePortData("Navio excluído.", done) {
+        repository.deleteVessel(imo)
+        vessels = repository.getVessels()
+    }
+
+    fun saveCargo(cargo: PortCargoCatalogItem, editing: Boolean, done: () -> Unit) =
+        changePortData("Carga salva.", done) {
+            require(Regex("CRG-[0-9]{2}").matches(cargo.code)) { "Informe o código no formato CRG-xx." }
+            require(editing || cargos.none { it.code.equals(cargo.code, true) }) { "Código de carga já cadastrado." }
+            repository.saveCargo(cargo, editing)
+            cargos = repository.getCargos()
+        }
+
+    fun deleteCargo(code: String, done: () -> Unit) = changePortData("Carga excluída.", done) {
+        repository.deleteCargo(code)
+        cargos = repository.getCargos()
+    }
+
+    private fun changePortData(message: String, done: () -> Unit = {}, operation: suspend () -> Unit) {
+        if (isLoading || isSavingSchedule) return
         viewModelScope.launch {
-            repository.setActiveTide(tideId)
-            tideTables.forEach { it.activeMonth = (it.id == tideId) }
-            activeTideTable = tideTables.firstOrNull { it.id == tideId }
-            successMessage = "Tábua de marés alterada para ${activeTideTable?.monthLabel}"
+            isLoading = true
+            errorMessage = null
+            try {
+                operation()
+                successMessage = message
+                done()
+            } catch (e: Exception) {
+                if (e is kotlinx.coroutines.CancellationException) throw e
+                errorMessage = e.localizedMessage ?: "Falha ao atualizar os dados."
+            } finally {
+                isLoading = false
+            }
         }
     }
 
@@ -200,7 +278,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         endDay: Double,
         ignoreScheduleId: Long? = null
     ): String? {
-        if (startDay < 1.0 || endDay > 30.0 || endDay <= startDay) {
+        if (!startDay.isFinite() || !endDay.isFinite() || startDay < 1.0 || endDay > 30.0 || endDay <= startDay) {
             return "Janela inválida: A atracação deve estar entre os dias 1 e 30, e o fim (dia %.1f) deve ser maior que o início (dia %.1f).".format(endDay, startDay)
         }
 
@@ -342,6 +420,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     fun toggleMockMode(isMock: Boolean) {
+        if (isLoading || isSavingSchedule) return
         config.isMockMode = isMock
         this.isMockMode = isMock
         loadAllData()

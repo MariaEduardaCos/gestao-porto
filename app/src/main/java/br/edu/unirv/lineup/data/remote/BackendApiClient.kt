@@ -1,5 +1,9 @@
 package br.edu.unirv.lineup.data.remote
 
+import br.edu.unirv.lineup.data.model.CargoDirection
+import br.edu.unirv.lineup.data.model.PortCargoCatalogItem
+import br.edu.unirv.lineup.data.model.RegisteredVessel
+import br.edu.unirv.lineup.data.model.TideMeasurement
 import br.edu.unirv.lineup.data.model.Berth
 import br.edu.unirv.lineup.data.model.CargoCategory
 import br.edu.unirv.lineup.data.model.ShipSchedule
@@ -82,37 +86,72 @@ class BackendApiClient(private val config: BackendConfig) {
     }
 
     suspend fun fetchTideTables(): List<TideTable> = withContext(Dispatchers.IO) {
-        val request = Request.Builder()
-            .url("${config.baseUrl}/api/port/tides")
-            .get()
-            .build()
-        client.newCall(request).execute().use { response ->
-            if (!response.isSuccessful) throw Exception("Erro HTTP ${response.code}")
-            val body = response.body?.string() ?: return@withContext emptyList()
-            val type = object : TypeToken<List<TideSummaryDto>>() {}.type
-            val list: List<TideSummaryDto> = gson.fromJson(body, type)
-            list.map {
-                TideTable(
-                    id = it.id,
-                    monthKey = it.monthKey,
-                    monthLabel = it.monthLabel,
-                    sourceFileName = it.sourceFileName ?: "",
-                    activeMonth = it.activeMonth,
-                    totalMeasurements = it.totalMeasurements,
-                    lowTideDays = it.lowTideDays ?: emptySet()
-                )
-            }
+        val type = object : TypeToken<List<TideTableDto>>() {}.type
+        gson.fromJson<List<TideTableDto>>(portRequest("GET", "tides/full"), type).map {
+            TideTable(it.id, it.monthKey, it.monthLabel, it.sourceFileName, it.activeMonth)
+                .withMeasurements(it.measurements.sortedBy { reading -> reading.fractionalDay })
         }
     }
 
-    suspend fun activateTideTable(tideId: Long): Boolean = withContext(Dispatchers.IO) {
-        val emptyBody = "".toRequestBody(jsonMediaType)
-        val request = Request.Builder()
-            .url("${config.baseUrl}/api/port/tides/$tideId/activate")
-            .post(emptyBody)
-            .build()
-        client.newCall(request).execute().use { response ->
-            response.isSuccessful
+    suspend fun activateTideTable(tideId: Long) = withContext(Dispatchers.IO) {
+        portRequest("POST", "tides/$tideId/activate", emptyMap<String, String>())
+    }
+
+    suspend fun importTide(table: TideTable, csv: String) = withContext(Dispatchers.IO) {
+        portRequest("POST", "tides/import-csv", mapOf(
+            "monthKey" to table.monthKey,
+            "monthLabel" to table.monthLabel,
+            "fileName" to table.sourceFileName,
+            "csvContent" to csv,
+            "activate" to table.activeMonth
+        ))
+    }
+
+    suspend fun fetchVessels(): List<RegisteredVessel> = withContext(Dispatchers.IO) {
+        val type = object : TypeToken<List<RegisteredVessel>>() {}.type
+        gson.fromJson(portRequest("GET", "vessels"), type)
+    }
+
+    suspend fun fetchCargos(): List<PortCargoCatalogItem> = withContext(Dispatchers.IO) {
+        val type = object : TypeToken<List<CargoDto>>() {}.type
+        gson.fromJson<List<CargoDto>>(portRequest("GET", "cargos"), type).map { dto ->
+            val direction = when {
+                dto.operationDirection.contains("Descarga", true) &&
+                    dto.operationDirection.contains("Carga", true) &&
+                    (dto.operationDirection.contains('&') ||
+                        dto.operationDirection.contains(" e carga", true)) -> CargoDirection.BOTH
+                dto.operationDirection.contains("Descarga", true) -> CargoDirection.UNLOAD
+                else -> CargoDirection.LOAD
+            }
+            val rate = dto.averageRateTonsDay.takeIf { it.endsWith("t/dia") }
+                ?.substringBefore(" ")?.replace(".", "")?.toIntOrNull()
+            PortCargoCatalogItem(dto.productCode, dto.productName, dto.cargoProfile, direction,
+                rate, dto.averageRateTonsDay.takeIf { rate == null })
+        }
+    }
+
+    suspend fun saveCargo(cargo: PortCargoCatalogItem, editing: Boolean) = saveCatalogItem(
+        "cargos", cargo.code, editing, CargoDto(cargo.code, cargo.name, cargo.direction.label,
+            cargo.category, cargo.rateLabel)
+    )
+
+    suspend fun saveCatalogItem(resource: String, id: String, editing: Boolean, value: Any) =
+        withContext(Dispatchers.IO) {
+            if (editing) portRequest("PUT", "$resource/$id", value)
+            else portRequest("POST", resource, value)
+        }
+
+    suspend fun deleteCatalogItem(resource: String, id: String) = withContext(Dispatchers.IO) {
+        portRequest("DELETE", "$resource/$id")
+    }
+
+    private fun portRequest(method: String, path: String, payload: Any? = null): String {
+        val body = payload?.let { gson.toJson(it).toRequestBody(jsonMediaType) }
+        val request = Request.Builder().url("${config.baseUrl}/api/port/$path").method(method, body).build()
+        return client.newCall(request).execute().use { response ->
+            val content = response.body?.string().orEmpty()
+            check(response.isSuccessful) { "HTTP ${response.code}: ${content.ifBlank { response.message }}" }
+            content
         }
     }
 
@@ -192,16 +231,6 @@ class BackendApiClient(private val config: BackendConfig) {
         }
     }
 
-    suspend fun deleteShipSchedule(scheduleId: Long): Boolean = withContext(Dispatchers.IO) {
-        val request = Request.Builder()
-            .url("${config.baseUrl}/api/port/schedules/$scheduleId")
-            .delete()
-            .build()
-        client.newCall(request).execute().use { response ->
-            response.isSuccessful
-        }
-    }
-
     private data class BerthResponseDto(
         val id: String,
         val name: String,
@@ -224,13 +253,20 @@ class BackendApiClient(private val config: BackendConfig) {
         val status: String?
     )
 
-    private data class TideSummaryDto(
+    private data class TideTableDto(
         val id: Long,
         val monthKey: String,
         val monthLabel: String,
-        val sourceFileName: String?,
+        val sourceFileName: String,
         val activeMonth: Boolean,
-        val totalMeasurements: Int,
-        val lowTideDays: Set<Int>?
+        val measurements: List<TideMeasurement>
+    )
+
+    private data class CargoDto(
+        val productCode: String,
+        val productName: String,
+        val operationDirection: String,
+        val cargoProfile: CargoCategory,
+        val averageRateTonsDay: String
     )
 }
